@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import cibertec.proyecto.models.vehicule.VehiculeMaintenance;
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Repository

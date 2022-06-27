@@ -7,7 +7,7 @@ import cibertec.proyecto.models.vehicule.VehiculeHire;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Repository

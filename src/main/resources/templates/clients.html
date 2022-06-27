@@ -84,31 +84,31 @@
 						<thead>
 							<tr>
 								<th>Nombre</th>
-								<th>Direccion</th>
+								<th>Ciudad</th>
 								<th>Celular</th>
 								<th>Email</th>
-								<th>Pais</th>
-								<th>Ciudad</th>
+								<th>Direccion</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="client:${clients}">
 								<td th:text="${client.name}"></td>
-								<td th:text="${client.address}"></td>
+								<td th:text="${client.number}"></td>
 								<td th:text="${client.phone}"></td>
 								<td th:text="${client.email}"></td>
-								<td th:text="${client.country.description}"></td>
-								<td th:text="${client.state.name}"></td>
-								<td><a type="button" class="btn btn-primary"
-									th:href="@{/client/{id}(id=${client.id}) }"><span
-										class="fa fa-edit"></span></a> <a type="button"
+								<td th:text="${client.address}"></td>
+								<td>
+									<a type="button" class="btn btn-primary"
+									th:href="@{/client/{id}(id=${client.id}) }">
+									<span class="fa fa-edit"></span></a> <a type="button"
 									onclick="return confirm('Estas Seguro?') ? true : false;"
 									class="btn btn-danger"
 									th:href="@{/deleteclient/{id}(id=${client.id}) }"><span
-										class="fa fa-trash"></span></a></td>
+										class="fa fa-trash"></span>
+									</a>
+								</td>
 							</tr>
-
 						</tbody>
 					</table>
 				</section>

@@ -4,82 +4,44 @@
 			<h5 class="modal-title" id="exampleModalLabel">Add new Client</h5>
 		</div>
 		<div class="modal-body">
-
-
 			<form th:action="@{/addclient}" method="post">
-
-				<!-- Name  -->
 				<div class="form-group">
 					<label for="exampleInputEmail1">Nombre</label> <input name="address"
 						type="text" class="form-control" id="exampleInputEmail1"
 						aria-describedby="emailHelp" placeholder="Name">
 				</div>
-				<!-- City -->
 				<div class="form-group">
-					<label for="exampleInputEmail1">City</label> <input name="city"
+					<label for="exampleInputEmail1">DNI/Pasaporte</label>
+					<input name="number"
 						type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" placeholder="City">
+						aria-describedby="emailHelp" placeholder="DNI/Pasaporte">
 				</div>
-
-
 				<div class="form-group">
-					<label for="exampleInputEmail1">Mobile</label> <input name="mobile"
+					<label for="exampleInputEmail1">Celular</label>
+					<input name="phone"
 						type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" placeholder="Mobile">
+						aria-describedby="emailHelp" placeholder="Celular">
 				</div>
-
-
 				<div class="form-group">
-					<label for="exampleInputEmail1">Celular</label> <input name="phone"
-						type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" placeholder="Phone">
-				</div>
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Website</label> <input
-						name="website" type="text" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Website">
-				</div>
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">email</label> <input name="email"
+					<label for="exampleInputEmail1">Email</label>
+					<input name="email"
 						type="text" class="form-control" id="exampleInputEmail1"
 						aria-describedby="emailHelp" placeholder="Email">
 				</div>
-
-				<!-- country -->
 				<div class="form-group">
-					<label for="exampleInputEmail1">Pais</label> <select
-						class="form-control" name="countryid">
-						<option th:each="country:${countries}"
-							th:text="${country.description}" th:value="${country.id}"></option>
-					</select>
+					<label for="exampleInputEmail1">Direccion</label>
+					<input name="address"
+						type="text" class="form-control" id="exampleInputEmail1"
+						aria-describedby="emailHelp" placeholder="Direccion">
 				</div>
-
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Ciudad</label> <select
-						class="form-control" name="stateid">
-						<option th:each="state:${states}" th:text="${state.name}"
-							th:value="${state.id}"></option>
-					</select>
-
-				</div>
-
 				<div class="form-group">
 					<label for="exampleInputEmail1">Detalles</label>
 					<textarea name="details" type="text" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Details"></textarea>
+						placeholder="Detalles"></textarea>
 				</div>
-
-
 				<button type="submit" class="btn btn-primary">Crear</button>
-
-
 			</form>
-
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>

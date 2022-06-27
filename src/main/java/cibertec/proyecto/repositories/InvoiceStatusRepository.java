@@ -7,7 +7,7 @@ import cibertec.proyecto.models.invoice.InvoiceStatus;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Repository

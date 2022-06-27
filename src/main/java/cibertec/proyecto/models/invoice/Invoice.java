@@ -18,7 +18,7 @@ import cibertec.proyecto.models.client.Client;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Entity

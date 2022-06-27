@@ -7,7 +7,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.client.Client;
 import cibertec.proyecto.models.client.Supplier;
 import cibertec.proyecto.models.country.Country;
 import cibertec.proyecto.models.country.Location;
@@ -44,12 +43,12 @@ import cibertec.proyecto.repositories.VehiculeTypeRepository;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  * @version 0.1
  */
 @Service
 @Transactional
-public class CarFleetInitDB implements ICarFleetInit{
+public class CarFleetInitDB implements ICarFleetInit {
      
 	@Autowired
 	CountryRepository countryRepository;
@@ -182,16 +181,6 @@ public class CarFleetInitDB implements ICarFleetInit{
 	}
 
 	/**
-	 * initClients
-	 */
-	@Override
-	public void initClients() {
-		Client c=new Client(1, "Christopher F. Neal", "75 Stadium Drive\r\n" + 
-				"Franklin, MA 02038", "New york", "0989870997", "8786585765", "", "n.f@test.us", countryRepository.findById(1).get(), 1, stateRepository.findById(1).get(), 1, "none");
-		clientRepository.save(c);
-	}
-
-	/**
 	 * initInvoiceStatus
 	 */
 	@Override
@@ -201,16 +190,7 @@ public class CarFleetInitDB implements ICarFleetInit{
 		invoiceStatusRepository.save(invoiceStatus);
 		invoiceStatusRepository.save(invoiceStatus2);
 	}
-
-	/**
-	 * initInvoices
-	 */
-	@Override
-	public void initInvoices() {
-		Invoice invoice=new Invoice(1, new Date(), invoiceStatusRepository.findById(1).get(), 1, clientRepository.findById(1).get(), 1, "none");
-		invoiceRepository.save(invoice);
-	}
-
+	
 	/**
 	 * initVehiculeMaintenance
 	 */
@@ -264,16 +244,5 @@ public class CarFleetInitDB implements ICarFleetInit{
 				locationRepository.findById(1).get(), 1, "none");
 		vehiculeRepository.save(v);
 	}
-
-	/**
-	 * initVehiculehire
-	 */
-	@Override
-	public void initVehiculehire() {
-		VehiculeHire vehiculeHire=new VehiculeHire(1, vehiculeRepository.findById(1).get(), 1, new Date(), new Date(), new Date(), new Date(), clientRepository.findById(1).get(),1, locationRepository.findById(1).get(), 1, 33.3, "none");
-		vehiculeHireRepository.save(vehiculeHire);
-	}
-
 	
-
 }

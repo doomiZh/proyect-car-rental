@@ -11,7 +11,7 @@ import cibertec.proyecto.repositories.SupplierRepository;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Service

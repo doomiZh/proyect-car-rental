@@ -14,14 +14,10 @@ public interface ICarFleetInit {
     void initEmployees();
     void initContacts();
     void initSuppliers();
-    void initClients();
     void initInvoiceStatus();
-    void initInvoices();
     void initVehiculeMaintenance();
     void initVehiculeModel();
     void initVehiculeStatus();
     void initVehiculeType();
     void initVehicules();
-    void initVehiculehire();
-    
 }

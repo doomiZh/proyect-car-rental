@@ -53,7 +53,7 @@ public class ApplicationController {
 		model.addAttribute("employee_nb", employeeService.getCount());
 		model.addAttribute("client_nb", clientService.getCount());
 		model.addAttribute("supplier_nb", supplierService.getCount());
-		model.addAttribute("vehicule_nb", vehiculeService.getCount());
+		model.addAttribute("vehicle_nb", vehiculeService.getCount());
 		return "index";
 	}
 

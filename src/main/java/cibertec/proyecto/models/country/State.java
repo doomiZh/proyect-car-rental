@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Entity

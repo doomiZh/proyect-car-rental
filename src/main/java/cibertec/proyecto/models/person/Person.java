@@ -16,7 +16,7 @@ import cibertec.proyecto.models.country.State;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @MappedSuperclass

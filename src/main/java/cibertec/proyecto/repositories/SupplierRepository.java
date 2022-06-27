@@ -7,7 +7,7 @@ import cibertec.proyecto.models.client.Supplier;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Repository

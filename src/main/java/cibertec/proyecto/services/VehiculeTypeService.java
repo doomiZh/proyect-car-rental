@@ -10,7 +10,7 @@ import cibertec.proyecto.repositories.VehiculeTypeRepository;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Service

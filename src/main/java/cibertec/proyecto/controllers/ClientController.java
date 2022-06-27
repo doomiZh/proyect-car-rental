@@ -55,13 +55,7 @@ public class ClientController {
 	public String getClients(Model model) {
 		List<Client> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
-
-		List<State> states = stateService.getStates();
-		model.addAttribute("states", states);
-
-		List<Country> countries = countryService.getCountries();
-		model.addAttribute("countries", countries);
-
+		
 		return "clients";
 	}
 
@@ -74,6 +68,7 @@ public class ClientController {
 
 	public String addClient(Client client) {
 		clientService.save(client);
+		
 		return "redirect:/clients";
 	}
 
@@ -85,13 +80,9 @@ public class ClientController {
 	 */
 	@RequestMapping("/client/{id}")
 	public String findById(@PathVariable("id") int id, Model model) {
-		List<State> states = stateService.getStates();
-		model.addAttribute("states", states);
-
-		List<Country> countries = countryService.getCountries();
-		model.addAttribute("countries", countries);
 		Client client = clientService.findById(id).get();
 		model.addAttribute("client", client);
+		
 		return "editClient";
 	}
 
@@ -108,6 +99,7 @@ public class ClientController {
 			Model model) {
 
 		clientService.save(client);
+		
 		return "redirect:/clients";
 	}
 
@@ -120,6 +112,7 @@ public class ClientController {
 	@Transactional
 	public String deleteClient(@PathVariable("id") int id) {
 		clientService.delete(id);
+		
 		return "redirect:/clients";
 	}
 }

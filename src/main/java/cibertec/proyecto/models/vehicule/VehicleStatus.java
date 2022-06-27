@@ -9,7 +9,7 @@ import cibertec.proyecto.models.CommonObject;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Entity

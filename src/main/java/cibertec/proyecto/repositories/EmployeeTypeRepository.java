@@ -7,7 +7,7 @@ import cibertec.proyecto.models.person.EmployeeType;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 @Repository

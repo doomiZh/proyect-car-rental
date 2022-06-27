@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * 
- * @author Admin
+ * @author grupo 4
  *
  */
 public class UserPrincipal implements UserDetails {
