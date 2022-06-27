@@ -1,12 +1,13 @@
 <div th:fragment="add_client_form" class="modal-dialog" role="document">
 	<div class="modal-content">
 		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Add new Client</h5>
+			<h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Cliente</h5>
 		</div>
 		<div class="modal-body">
 			<form th:action="@{/addclient}" method="post">
 				<div class="form-group">
-					<label for="exampleInputEmail1">Nombre</label> <input name="address"
+					<label for="exampleInputEmail1">Nombre</label>
+					<input name="name"
 						type="text" class="form-control" id="exampleInputEmail1"
 						aria-describedby="emailHelp" placeholder="Name">
 				</div>

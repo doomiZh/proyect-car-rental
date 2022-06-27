@@ -2,93 +2,66 @@
 	role="document">
 	<div class="modal-content">
 		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Add new vehicule
-				hire</h5>
+			<h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Alquiler</h5>
 		</div>
-
 		<div class="modal-body">
 			<form th:action="@{/addvehiculehire}" method="post">
-
 				<div class="form-group">
 					<label for="exampleInputEmail1">Vehiculo</label> <select
 						class="form-control" name="vehicleid">
 						<option th:each="vehicule:${vehicules}" th:text="${vehicule.name}"
 							th:value="${vehicule.id}"></option>
 					</select>
-
 				</div>
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Fecha Fin</label> <input
-						name="dateOut" type="date" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Enter email">
-				</div>
-
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Time out</label> <input
-						name="timeOut" type="time" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Enter email">
-				</div>
-
-
 				<div class="form-group">
 					<label for="exampleInputEmail1">Fecha Inicio</label> <input
 						name="dateIn" type="date" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Enter email">
 				</div>
-
 				<div class="form-group">
 					<label for="exampleInputEmail1">Time In</label> <input
 						name="timeIn" type="time" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Enter email">
 				</div>
-
+				<div class="form-group">
+					<label for="exampleInputEmail1">Fecha Fin</label> <input
+						name="dateOut" type="date" class="form-control"
+						id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Enter email">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Time out</label> <input
+						name="timeOut" type="time" class="form-control"
+						id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Enter email">
+				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Cliente</label> <select
 						class="form-control" name="clientid">
 						<option th:each="client:${clients}" th:text="${client.name}"
 							th:value="${client.id}"></option>
 					</select>
-
 				</div>
-
 				<div class="form-group">
-					<label for="exampleInputEmail1">Location </label> <select
-						class="form-control" name="locationid">
-						<option th:each="location:${locations}"
-							th:text="${location.description}" th:value="${location.id}"></option>
-					</select>
-
-				</div>
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Price ($)</label> <input
+					<label for="exampleInputEmail1">Precio (S/)</label> <input
 						name="price" type="number" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Price">
 				</div>
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Remaks</label>
+					<label for="exampleInputEmail1">Detalles</label>
 					<textarea name="remarks" type="text" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Remarks"></textarea>
+						placeholder="Detalles"></textarea>
 				</div>
-
 				<button type="submit" class="btn btn-primary">Crear</button>
-
-
 			</form>
-
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
 		</div>
 	</div>
 </div>

@@ -35,13 +35,6 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
-
-<!-- =======================================================
-      
-      
-      
-      
-    ======================================================= -->
 </head>
 
 <body>
@@ -83,24 +76,20 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th>Vehiculo</th>
 								<th>Fecha Inicio</th>
 								<th>Fecha Fin</th>
 								<th>Cliente</th>
-								<th>Ubicacion</th>
+								<th>Placa Vehiculo</th>
 								<th>Precio</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="vehiculehire:${vehiculehires}">
-								<td th:text="${vehiculehire.vehicle.name}"></td>
-								<td
-									th:text="${ #dates.format(vehiculehire.dateIn, 'dd-MMM-yyyy')}"></td>
-								<td
-									th:text="${ #dates.format(vehiculehire.dateOut, 'dd-MMM-yyyy')}"></td>
+								<td th:text="${ #dates.format(vehiculehire.dateIn, 'dd-MMM-yyyy')}"></td>
+								<td th:text="${ #dates.format(vehiculehire.dateOut, 'dd-MMM-yyyy')}"></td>
 								<td th:text="${vehiculehire.client.name}"></td>
-								<td th:text="${vehiculehire.location.city}"></td>
+								<td th:text="${vehiculehire.vehicle.vehicleNumber}"></td>
 								<td th:text="${vehiculehire.price}+' $'"></td>
 								<td><a type="button" class="btn btn-primary"
 									th:href="@{/vehiculehire/{id}(id=${vehiculehire.id}) }"><span
@@ -124,10 +113,6 @@
 		<div th:insert="addVehiculeHireForm :: add_vehicule_hire_form"
 			class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 			aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
-
-
-
-
 
 	</section>
 	<!-- container section end -->
