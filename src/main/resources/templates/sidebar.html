@@ -3,70 +3,103 @@
 	<div id="sidebar" class="nav-collapse ">
 		<!-- sidebar menu start-->
 		<ul class="sidebar-menu">
-			<li class="active"><a class="" th:href="@{/index}"> <i
-					class="icon_house_alt"></i> <span>Dashboard</span>
-			</a></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_document_alt"></i> <span>Vehicule</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+			<li class="active">
+				<a class="" th:href="@{/index}">
+					<i class="icon_house_alt"></i>
+					<span>Principal</span>
+				</a>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_document_alt"></i> <span>Vehiculos</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
 					<li><a class="" th:href="@{/vehicules}">Vehicule Data</a></li>
 					<li><a class="" th:href="@{/vehiculemaintenance}">Maintenanace</a></li>
 					<li><a class="" th:href="@{/vehiculehire}">Hires</a></li>
-				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>Parameters</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i> <span>Clientes</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
-					<li><a class="" th:href="@{/vehiculetypes}">Vehicule Types</a></li>
-					<li><a class="" th:href="@{/vehiculemodels}">Vehicule
-							Models</a></li>
-					<li><a class="" th:href="@{/vehiculestatus}">Status Values</a></li>
-				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>People</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+					<li><a class="" th:href="@{/clients}">Ver Listado</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i> <span>Proveedores</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
-					<li><a class="" th:href="@{/clients}">Clients</a></li>
-					<li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
-				</ul></li>
-
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>HR Settings</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+					<li><a class="" th:href="@{/suppliers}">Ver Listado</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i> <span>Cuentas</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
-					<li><a class="" th:href="@{/employeetypes}">Employees
-							Types</a></li>
-					<li><a class="" th:href="@{jobtitles}">Job Titles</a></li>
-
-				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>Accounts</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+					<li>
+						<a class="" th:href="@{/invoices}">Invoices</a></li>
+					<li>
+						<a class="" th:href="@{invoicestatus}">
+							Invoices Status Values
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i> <span>Parametros</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
-					<li><a class="" th:href="@{/invoices}">Invoices</a></li>
-					<li><a class="" th:href="@{invoicestatus}">Invoices Status
-							Values</a></li>
-
-				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>Globals</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
-			</a>
+					<li>
+						<a class="" th:href="@{/vehiculetypes}">Tipos de Vehiculos</a>
+					</li>
+					<li>
+						<a class="" th:href="@{/vehiculemodels}">Modelos de Vehiculos</a>
+					</li>
+					<!--
+					<li>
+						<a class="" th:href="@{/vehiculestatus}">Status Values</a>
+					</li>
+					-->
+				</ul>
+			</li>
+			<!--
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i>
+					<span>HR Settings</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
+				<ul class="sub">
+					<li>
+						<a class="" th:href="@{/employeetypes}">Employees Types</a>
+					</li>
+					<li>
+						<a class="" th:href="@{jobtitles}">Job Titles</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" class="">
+					<i class="icon_desktop"></i> <span>Globals</span>
+					<span class="menu-arrow arrow_carrot-right"></span>
+				</a>
 				<ul class="sub">
 					<li><a class="" th:href="@{/countries}">Countries</a></li>
 					<li><a class="" th:href="@{/states}">States</a></li>
 					<li><a class="" th:href="@{/locations}">Locations</a></li>
-				</ul></li>
-
-
-
+				</ul>
+			</li>
+			-->
 		</ul>
-		<!-- sidebar menu end-->
 	</div>
 </aside>

@@ -40,7 +40,7 @@ You can pass a set of these options to the initialize function to set a custom b
     <tr>
         <th>Property (Type)</th>
         <th>Default</th>
-        <th>Description</th>
+        <th>Descripcion</th>
     </tr>
     <tr>
         <td><strong>barColor</strong></td>

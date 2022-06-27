@@ -72,7 +72,7 @@
 							<i class="fa fa-laptop"></i> COUNTRIES
 						</h3>
 						<ol class="breadcrumb">
-							<li><i class="fa fa-home"></i><a th:href="@{/index}">Home</a></li>
+							<li><i class="fa fa-home"></i><a th:href="@{/index}">Inicio</a></li>
 							<li>Countries</li>
 							<li>Edit</li>
 						</ol>
@@ -83,7 +83,7 @@
 						th:object="${country}" method="post">
 
 						<div class="form-group">
-							<label for="exampleInputEmail1">Description</label> <input
+							<label for="exampleInputEmail1">Descripcion</label> <input
 								th:value="${country.description}" name="description" type="text"
 								class="form-control" id="exampleInputEmail1"
 								aria-describedby="emailHelp" placeholder="Enter email">
