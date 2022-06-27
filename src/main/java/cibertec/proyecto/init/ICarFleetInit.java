@@ -19,5 +19,4 @@ public interface ICarFleetInit {
     void initVehiculeModel();
     void initVehiculeStatus();
     void initVehiculeType();
-    void initVehicules();
 }

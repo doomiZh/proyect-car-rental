@@ -11,7 +11,6 @@ import cibertec.proyecto.models.client.Supplier;
 import cibertec.proyecto.models.country.Country;
 import cibertec.proyecto.models.country.Location;
 import cibertec.proyecto.models.country.State;
-import cibertec.proyecto.models.invoice.Invoice;
 import cibertec.proyecto.models.invoice.InvoiceStatus;
 import cibertec.proyecto.models.person.Employee;
 import cibertec.proyecto.models.person.EmployeeType;
@@ -19,8 +18,6 @@ import cibertec.proyecto.models.person.JobTitle;
 import cibertec.proyecto.models.user.Userss;
 import cibertec.proyecto.models.vehicule.VehicleModel;
 import cibertec.proyecto.models.vehicule.VehicleStatus;
-import cibertec.proyecto.models.vehicule.Vehicule;
-import cibertec.proyecto.models.vehicule.VehiculeHire;
 import cibertec.proyecto.models.vehicule.VehiculeMaintenance;
 import cibertec.proyecto.models.vehicule.VehiculeType;
 import cibertec.proyecto.repositories.ClientRepository;
@@ -205,8 +202,11 @@ public class CarFleetInitDB implements ICarFleetInit {
 	 */
 	@Override
 	public void initVehiculeModel() {
-		VehicleModel vehiculeModel=new VehicleModel(1, "Toyota", "Toyota");
-		vehiculeModelRepository.save(vehiculeModel);
+		vehiculeModelRepository.save(new VehicleModel(1, "Toyota Yaris 2020", "Toyota Yaris 2020"));
+		vehiculeModelRepository.save(new VehicleModel(2, "Toyota Corolla 2022", "Toyota Corolla 2022"));
+		vehiculeModelRepository.save(new VehicleModel(3, "Toyota 4Runner 2021", "Toyota 4Runner 2021"));
+		vehiculeModelRepository.save(new VehicleModel(4, "Kia Rio 2018", "Kia Rio 2018"));
+		vehiculeModelRepository.save(new VehicleModel(5, "Kia Cerato 2020", "Kia Cerato 2020"));
 	}
 
 	/**
@@ -214,11 +214,9 @@ public class CarFleetInitDB implements ICarFleetInit {
 	 */
 	@Override
 	public void initVehiculeStatus() {
-		VehicleStatus vehiculeStatus=new VehicleStatus(1,"Good","Good");
-		VehicleStatus vehiculeStatus2=new VehicleStatus(2,"Bad","Bad");
-		vehiculeStatusRepository.save(vehiculeStatus);
-		vehiculeStatusRepository.save(vehiculeStatus2);
-		
+		vehiculeStatusRepository.save(new VehicleStatus(1,"Disponible","Disponible"));
+		vehiculeStatusRepository.save(new VehicleStatus(2,"Averiado","Averiado"));
+		vehiculeStatusRepository.save(new VehicleStatus(3,"En Mantenimiento","En Mantenimiento"));
 	}
 
 	/**
@@ -226,23 +224,11 @@ public class CarFleetInitDB implements ICarFleetInit {
 	 */
 	@Override
 	public void initVehiculeType() {
-     VehiculeType vehiculeType=new VehiculeType(1, "Sedan", "Sedan");
-     VehiculeType vehiculeType2=new VehiculeType(2, "Hatchback", "Hatchback");
-     vehiculeTypeRepository.save(vehiculeType);
-     vehiculeTypeRepository.save(vehiculeType2);
-	}
-
-	/**
-	 * initVehicules
-	 */
-	@Override
-	public void initVehicules() {
-		Vehicule v=new Vehicule(1, "Toyota", vehiculeTypeRepository.findById(1).get(),
-				1, "32D2D22", new Date(), new Date(), "", "", "",
-				vehiculeStatusRepository.findById(1).get(), 1, "22", employeeRepository.findById(1).get(), 
-				1, vehiculeModelRepository.findById(1).get(), 1,
-				locationRepository.findById(1).get(), 1, "none");
-		vehiculeRepository.save(v);
+		 vehiculeTypeRepository.save(new VehiculeType(1, "Auto Sedan", "Auto Sedan"));
+		 vehiculeTypeRepository.save(new VehiculeType(2, "Auto Hatchback", "Auto Hatchback"));
+		 vehiculeTypeRepository.save(new VehiculeType(3, "Camioneta Rural", "Camioneta Rural"));
+		 vehiculeTypeRepository.save(new VehiculeType(4, "Camioneta Van", "Camioneta Van"));
+		 vehiculeTypeRepository.save(new VehiculeType(5, "Camioneta Pickup", "Camioneta Pickup"));
 	}
 	
 }

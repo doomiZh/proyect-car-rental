@@ -15,11 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.client.Client;
-import cibertec.proyecto.models.country.Country;
-import cibertec.proyecto.models.country.State;
 import cibertec.proyecto.services.ClientService;
-import cibertec.proyecto.services.CountryService;
-import cibertec.proyecto.services.StateService;
 
 /**
  * 
@@ -33,19 +29,7 @@ public class ClientController {
 	 */
 	@Autowired
 	private ClientService clientService;
-
-	/**
-	 * countryService
-	 */
-	@Autowired
-	private CountryService countryService;
-
-	/**
-	 * stateService
-	 */
-	@Autowired
-	private StateService stateService;
-
+	
 	/**
 	 * getClients
 	 * @param model

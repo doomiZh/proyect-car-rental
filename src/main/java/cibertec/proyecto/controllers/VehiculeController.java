@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.person.Employee;
 import cibertec.proyecto.models.vehicule.VehicleModel;
 import cibertec.proyecto.models.vehicule.VehicleStatus;
 import cibertec.proyecto.models.vehicule.Vehicule;
@@ -75,16 +74,16 @@ public class VehiculeController {
 	public String getVehicules(Model model) {
 		List<Vehicule> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
+		
 		List<VehiculeType> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
-		List<Employee> employees = employeeService.getEmployees();
-		model.addAttribute("employees", employees);
-		List<cibertec.proyecto.models.country.Location> locations = locationService.getLocations();
-		model.addAttribute("locations", locations);
+		
 		List<VehicleModel> vehiculeModels = vehiculeModelService.getVehiculeModels();
 		model.addAttribute("vehiculeModels", vehiculeModels);
+		
 		List<VehicleStatus> vehiculeStatus = vehiculeStatusService.getVehicleStatus();
 		model.addAttribute("vehiculeStatus", vehiculeStatus);
+		
 		return "vehicules";
 	}
 
@@ -111,16 +110,16 @@ public class VehiculeController {
 	public String findById(@PathVariable("id") int id, Model model) {
 		List<VehiculeType> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
-		List<Employee> employees = employeeService.getEmployees();
-		model.addAttribute("employees", employees);
-		List<cibertec.proyecto.models.country.Location> locations = locationService.getLocations();
-		model.addAttribute("locations", locations);
+		
 		List<VehicleModel> vehiculeModels = vehiculeModelService.getVehiculeModels();
 		model.addAttribute("vehiculeModels", vehiculeModels);
+		
 		List<VehicleStatus> vehiculeStatus = vehiculeStatusService.getVehicleStatus();
 		model.addAttribute("vehiculeStatus", vehiculeStatus);
+		
 		Vehicule vehicule = vehiculeService.findById(id).get();
 		model.addAttribute("vehicule", vehicule);
+		
 		return "editVehicule";
 	}
 

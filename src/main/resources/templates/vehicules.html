@@ -74,7 +74,7 @@
 								<th>Modelo Vehiculo</th>
 								<th>Placa</th>
 								<th>Estado</th>
-								<th>Fecha Registro</th>
+								<th>Fecha Adquisicion</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
@@ -84,7 +84,7 @@
 								<td th:text="${vehicule.vehicleModel.description}"></td>
 								<td th:text="${vehicule.vehicleNumber}"></td>
 								<td th:text="${vehicule.vehicleStatus.description}"></td>
-								<td th:text="${ #dates.format(vehicule.registrationDate, 'dd-MMM-yyyy')}"></td>
+								<td th:text="${ #dates.format(vehicule.acquisitionDate, 'dd-MMM-yyyy')}"></td>
 								<td>
 									<a type="button" class="btn btn-primary"
 										th:href="@{/vehicule/{id}(id=${vehicule.id})}">
