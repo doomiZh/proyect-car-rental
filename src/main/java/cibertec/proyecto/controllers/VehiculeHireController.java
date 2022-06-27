@@ -141,7 +141,7 @@ public class VehiculeHireController {
 	@GetMapping("/deletevehiculehire/{id}")
 	@Transactional
 	public String deleteVehiculeHire(@PathVariable("id") int id) {
-		vehiculeHireService.delete(id);
+		vehiculeHireService.deleteById(id);
 		return "redirect:/vehiculehire";
 	}
 }

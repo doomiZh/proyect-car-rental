@@ -95,8 +95,7 @@ public class ClientController {
 	@GetMapping("/deleteclient/{id}")
 	@Transactional
 	public String deleteClient(@PathVariable("id") int id) {
-		clientService.delete(id);
-		
+		clientService.deleteById(id);
 		return "redirect:/clients";
 	}
 }

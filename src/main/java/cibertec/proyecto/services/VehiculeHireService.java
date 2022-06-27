@@ -36,9 +36,10 @@ public class VehiculeHireService {
 	 * save
 	 * 
 	 * @param hire
+	 * @return 
 	 */
-	public void save(VehiculeHire hire) {
-		vehiculeHireRepository.save(hire);
+	public VehiculeHire save(VehiculeHire hire) {
+		return vehiculeHireRepository.save(hire);
 	}
 
 	/**
@@ -56,7 +57,7 @@ public class VehiculeHireService {
 	 * 
 	 * @param id
 	 */
-	public void delete(int id) {
-		vehiculeHireRepository.delete(vehiculeHireRepository.findById(id).get());
+	public void deleteById(int id) {
+		vehiculeHireRepository.deleteById(id);
 	}
 }

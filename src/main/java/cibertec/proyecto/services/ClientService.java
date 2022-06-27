@@ -29,6 +29,7 @@ public class ClientService {
 	 */
 	public List<Client> getClients()
 	{
+		
 		return clientRepository.findAll();
 	}
 	
@@ -44,10 +45,11 @@ public class ClientService {
 	/**
 	 * save
 	 * @param client
+	 * @return 
 	 */
-	public void save(Client client)
+	public Client save(Client client)
 	{
-		clientRepository.save(client);
+		return clientRepository.save(client);
 	}
 
     /**
@@ -63,7 +65,8 @@ public class ClientService {
 	 * delete
 	 * @param id
 	 */
-	public void delete(int id) {
-		clientRepository.delete(clientRepository.findById(id).get());
+	public void deleteById(int id) {
+		clientRepository.deleteById(id);
 	}
+
 }

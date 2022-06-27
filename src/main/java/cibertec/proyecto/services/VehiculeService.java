@@ -71,8 +71,10 @@ public class VehiculeService {
 	 */
 	public void deleteById(int id) {
 
-		vehiculeRepository.delete(vehiculeRepository.getOne(id));
+		vehiculeRepository.deleteById(id);
 
 	}
+
+	
 
 }

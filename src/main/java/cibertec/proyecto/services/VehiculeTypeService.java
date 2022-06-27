@@ -30,5 +30,7 @@ public class VehiculeTypeService {
 	public List<VehiculeType> getVehiculeTypes() {
 		return vehiculeTypeRepository.findAll();
 	}
+	
+	
 
 }
