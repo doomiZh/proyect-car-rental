@@ -44,10 +44,7 @@ public class SpringCibertecApplication implements CommandLineRunner {
 		carFleetInit.initVehiculeModel();
 		carFleetInit.initVehiculeType();
 		carFleetInit.initEmployeeTypes();
-		carFleetInit.initEmployees();
 		carFleetInit.initInvoiceStatus();
-		carFleetInit.initSuppliers();
-		carFleetInit.initVehiculeMaintenance();
 	}
 
 }

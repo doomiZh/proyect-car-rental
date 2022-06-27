@@ -7,12 +7,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.client.Supplier;
 import cibertec.proyecto.models.country.Country;
 import cibertec.proyecto.models.country.Location;
 import cibertec.proyecto.models.country.State;
 import cibertec.proyecto.models.invoice.InvoiceStatus;
-import cibertec.proyecto.models.person.Employee;
 import cibertec.proyecto.models.person.EmployeeType;
 import cibertec.proyecto.models.person.JobTitle;
 import cibertec.proyecto.models.user.Userss;
@@ -149,35 +147,6 @@ public class CarFleetInitDB implements ICarFleetInit {
 	}
 
 	/**
-	 * initEmployees
-	 */
-	@Override
-	public void initEmployees() {
-		Employee emp1=new Employee(1, "", "Bud Y. ", "Farmer", 
-				"worker", "", "9G979H8G", "Male", "married",
-				countryRepository.findById(2).get(), 2, stateRepository.findById(1).get(), 
-				2, new Date(), "Oakland", "2885 Station Street\r\n Oakland, CA 94612", "133434", "31431341",
-				"bud.farmer@gmail.com", "bud.jpg", employeeTypeRepository.findById(1).get(), 1, "",
-				"", jobTitleRepository.findById(1).get(), 1, new Date());
-		employeeRepository.save(emp1);
-	}
-
-	@Override
-	public void initContacts() {
-		
-	}
-
-	/**
-	 * initSuppliers
-	 */
-	@Override
-	public void initSuppliers() {
-		Supplier supplier=new Supplier(1, "Donald M. Ellis", "651 Lilac Lane Darien, GA 31305", "California", "13434134", "4232352", "www.google.com", "dobald.ellis@gmail.com", countryRepository.findById(2).get(), 2, stateRepository.findById(2).get(), 2, "none");
-		supplierRepository.save(supplier);
-		
-	}
-
-	/**
 	 * initInvoiceStatus
 	 */
 	@Override
@@ -186,15 +155,6 @@ public class CarFleetInitDB implements ICarFleetInit {
 		InvoiceStatus invoiceStatus2=new InvoiceStatus(2, "Expired", "none");
 		invoiceStatusRepository.save(invoiceStatus);
 		invoiceStatusRepository.save(invoiceStatus2);
-	}
-	
-	/**
-	 * initVehiculeMaintenance
-	 */
-	@Override
-	public void initVehiculeMaintenance() {
-		VehiculeMaintenance vehiculeMaintenance=new VehiculeMaintenance(1, vehiculeRepository.findById(1).get(), 1, new Date(), new Date(), 22.0, supplierRepository.findById(1).get(), 1, "none");
-	    vehiculeMaintenanceRepository.save(vehiculeMaintenance);
 	}
 
 	/**

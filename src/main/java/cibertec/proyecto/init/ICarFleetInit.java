@@ -11,11 +11,7 @@ public interface ICarFleetInit {
     void initUsers();
     void initEmployeeTypes();
     void initJobTitles();
-    void initEmployees();
-    void initContacts();
-    void initSuppliers();
     void initInvoiceStatus();
-    void initVehiculeMaintenance();
     void initVehiculeModel();
     void initVehiculeStatus();
     void initVehiculeType();
