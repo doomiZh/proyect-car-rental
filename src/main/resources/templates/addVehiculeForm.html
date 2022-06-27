@@ -4,17 +4,8 @@
 		<div class="modal-header">
 			<h5 class="modal-title" id="exampleModalLabel">Add new vehicule</h5>
 		</div>
-
-
-
 		<div class="modal-body">
 			<form th:action="@{/addvehicule}" method="post">
-
-				<div class="form-group">
-					<label for="exampleInputEmail1">Nombre</label> <input name="name"
-						type="text" class="form-control" id="exampleInputEmail1"
-						aria-describedby="emailHelp" placeholder="Name">
-				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Tipo Vehiculo</label> <select
 						class="form-control" name="vehicletypeid">
@@ -24,7 +15,7 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Modelo de Vehiculo</label> <select
+					<label for="exampleInputEmail1">Modelo Vehiculo</label> <select
 						class="form-control" name="vehiclemodelid">
 						<option th:each="vehiculemodel:${vehiculeModels}"
 							th:text="${vehiculemodel.description}"
@@ -35,19 +26,7 @@
 					<label for="exampleInputEmail1">Placa</label> <input
 						name="vehicleNumber" type="number" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="vehicle Number">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail1">Fecha de Adquisicion</label> <input
-						name="acquisitionDate" type="date" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Enter email">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail1">Descripcion</label>
-					<textarea name="description" type="text" class="form-control"
-						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Description"></textarea>
+						placeholder="Placa">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Estado</label> <select
@@ -57,17 +36,16 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Ubicacion</label> <select
-						class="form-control" name="locationid">
-						<option th:each="location:${locations}"
-							th:text="${location.description}" th:value="${location.id}"></option>
-					</select>
+					<label for="exampleInputEmail1">Fecha de Adquisicion</label> <input
+						name="acquisitionDate" type="date" class="form-control"
+						id="exampleInputEmail1" aria-describedby="emailHelp"
+						placeholder="Fecha de Adquisicion">
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Datos Adicionales</label>
-					<textarea name="remarks" type="text" class="form-control"
+					<label for="exampleInputEmail1">Descripcion</label>
+					<textarea name="description" type="text" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
-						placeholder="Remarks"></textarea>
+						placeholder="Descripcion"></textarea>
 				</div>
 				<button type="submit" class="btn btn-primary">Create</button>
 			</form>

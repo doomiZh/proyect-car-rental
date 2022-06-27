@@ -83,7 +83,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1">Modelo de Vehiculo</label> <select
+							<label for="exampleInputEmail1">Modelo Vehiculo</label> <select
 								class="form-control" name="vehiclemodelid">
 								<option th:each="vehiculemodel:${vehiculeModels}"
 									th:text="${vehiculemodel.description}"
@@ -98,18 +98,6 @@
 								th:value="${vehicule.vehicleNumber}">
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1">Fecha de Adquisicion</label> <input
-								name="acquisitionDate" type="date" class="form-control"
-								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Enter email">
-						</div>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Descripcion</label>
-							<textarea name="description" type="text" class="form-control"
-								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Description" th:value="${vehicule.description}"></textarea>
-						</div>
-						<div class="form-group">
 							<label for="exampleInputEmail1">Estado</label> <select
 								class="form-control" name="vehiclestatusid">
 								<option th:each="vehiculeS:${vehiculeStatus}"
@@ -117,24 +105,22 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1">Ubicacion</label> <select
-								class="form-control" name="locationid">
-								<option th:each="location:${locations}"
-									th:text="${location.description}" th:value="${location.id}"></option>
-							</select>
+							<label for="exampleInputEmail1">Fecha de Adquisicion</label> <input
+								name="acquisitionDate" type="date" class="form-control"
+								id="exampleInputEmail1" aria-describedby="emailHelp"
+								placeholder="Fecha de Adquisicion">
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1">Datos Adicionales</label>
-							<textarea name="remarks" type="text" class="form-control"
+							<label for="exampleInputEmail1">Descripcion</label>
+							<textarea name="description" type="text" class="form-control"
 								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Remarks" th:value="${vehicule.remarks}"></textarea>
+								placeholder="Descripcion" th:value="${vehicule.description}"></textarea>
 						</div>
 						<button type="submit" class="btn btn-primary">Editar</button>
 					</form>
 				</div>
 			</section>
 		</section>
-		<!--main content end-->
 	</section>
 	<!-- container section start -->
 	<div th:insert="footer :: footer"></div>

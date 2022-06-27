@@ -70,41 +70,37 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th>Nombre</th>
-								<th>Tipo</th>
-								<th>Modelo de Vehiculo</th>
+								<th>Tipo Vehiculo</th>
+								<th>Modelo Vehiculo</th>
+								<th>Placa</th>
 								<th>Estado</th>
-								<th>Ubicacion</th>
-								<th>Fecha de Registro</th>
+								<th>Fecha Registro</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="vehicule:${vehicules}">
-								<td th:text="${vehicule.name}"></td>
 								<td th:text="${vehicule.vehicleType.description}"></td>
 								<td th:text="${vehicule.vehicleModel.description}"></td>
+								<td th:text="${vehicule.vehicleNumber}"></td>
 								<td th:text="${vehicule.vehicleStatus.description}"></td>
-								<td th:text="${vehicule.currentLocation.description}"></td>
 								<td th:text="${ #dates.format(vehicule.registrationDate, 'dd-MMM-yyyy')}"></td>
 								<td>
 									<a type="button" class="btn btn-primary"
-									th:href="@{/vehicule/{id}(id=${vehicule.id}) }">
+										th:href="@{/vehicule/{id}(id=${vehicule.id})}">
 										<span class="fa fa-edit"></span>
 									</a>
 									<a type="button"
-										onclick="return confirm('Are you sure?') ? true : false;"
+										onclick="return confirm('Estas Seguro?') ? true : false;"
 										class="btn btn-danger"
 										th:href="@{/deletevehicule/{id}(id=${vehicule.id}) }">
 										<span class="fa fa-trash"></span>
 									</a>
 								</td>
 							</tr>
-
 						</tbody>
 					</table>
 				</section>
-				<!-- page end-->
 			</section>
 		</section>
 		<!--main content end-->
