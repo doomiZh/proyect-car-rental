@@ -13,7 +13,7 @@ import delta.dev.software.services.EmployeeTypesService;
 
 /**
  * EmployeeTypeController
- * @author Delta Dev Software
+ * @author Grupo 4
  *
  */
 @Controller

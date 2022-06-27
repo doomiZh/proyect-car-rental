@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * ContactController
- * @author Delta Dev Software
+ * @author Grupo 4
  * @version 0.1
  */
 public class ContactController {

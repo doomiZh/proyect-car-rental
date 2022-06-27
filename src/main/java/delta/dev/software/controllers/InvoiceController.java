@@ -23,7 +23,7 @@ import delta.dev.software.services.InvoiceStatusService;
 
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  * @version 0.1
  */
 @Controller

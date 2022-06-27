@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import delta.dev.software.models.client.Client;
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  * @version 0.1
  */
 @Repository

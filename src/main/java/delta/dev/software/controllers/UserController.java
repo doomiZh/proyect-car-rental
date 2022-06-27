@@ -12,7 +12,7 @@ import delta.dev.software.services.UserService;
 
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  *
  */
 @Controller

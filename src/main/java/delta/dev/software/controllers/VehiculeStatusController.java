@@ -11,7 +11,7 @@ import delta.dev.software.models.vehicule.VehicleStatus;
 import delta.dev.software.services.VehiculeStatusService;
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  * @version 0.1
  */
 @Controller

@@ -15,7 +15,7 @@ import delta.dev.software.services.StateService;
 
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  * @version 1.0
  */
 @Controller

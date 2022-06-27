@@ -15,7 +15,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 /**
  * ApplicationSecurityConfig
- * @author Delta dev software
+ * @author Grupo 4
  * @version 0.1
  */
 @SuppressWarnings("deprecation")

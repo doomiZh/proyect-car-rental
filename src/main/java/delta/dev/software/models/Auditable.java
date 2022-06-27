@@ -15,7 +15,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
  * 
- * @author Delta Dev Software
+ * @author Grupo 4
  *
  * @param <U>
  */
