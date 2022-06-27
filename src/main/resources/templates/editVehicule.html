@@ -102,7 +102,7 @@
 
 
 						<div class="form-group">
-							<label for="exampleInputEmail1">Registration Date</label> <input
+							<label for="exampleInputEmail1">Fecha de Registro</label> <input
 								name="registrationDate" type="date" class="form-control"
 								id="exampleInputEmail1" aria-describedby="emailHelp"
 								placeholder="Enter email">
@@ -173,7 +173,7 @@
 
 
 						<div class="form-group">
-							<label for="exampleInputEmail1">Location</label> <select
+							<label for="exampleInputEmail1">Ubicacion</label> <select
 								class="form-control" name="locationid">
 								<option th:each="location:${locations}"
 									th:text="${location.description}" th:value="${location.id}"></option>
