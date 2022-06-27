@@ -1,0 +1,34 @@
+package cibertec.proyecto.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cibertec.proyecto.models.invoice.InvoiceStatus;
+import cibertec.proyecto.repositories.InvoiceStatusRepository;
+
+/**
+ * 
+ * @author Admin
+ *
+ */
+@Service
+public class InvoiceStatusService {
+
+	/**
+	 * invoiceStatusRepository
+	 */
+	@Autowired
+	private InvoiceStatusRepository invoiceStatusRepository;
+
+	/**
+	 * getInvoices
+	 * 
+	 * @return
+	 */
+	public List<InvoiceStatus> getInvoices() {
+		return invoiceStatusRepository.findAll();
+	}
+
+}

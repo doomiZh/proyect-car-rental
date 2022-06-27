@@ -16,14 +16,14 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import delta.dev.software.models.vehicule.Vehicule;
-import delta.dev.software.repositories.EmployeeRepository;
-import delta.dev.software.repositories.LocationRepository;
-import delta.dev.software.repositories.VehiculeModelRepository;
-import delta.dev.software.repositories.VehiculeRepository;
-import delta.dev.software.repositories.VehiculeStatusRepository;
-import delta.dev.software.repositories.VehiculeTypeRepository;
-import delta.dev.software.services.VehiculeService;
+import cibertec.proyecto.models.vehicule.Vehicule;
+import cibertec.proyecto.repositories.EmployeeRepository;
+import cibertec.proyecto.repositories.LocationRepository;
+import cibertec.proyecto.repositories.VehiculeModelRepository;
+import cibertec.proyecto.repositories.VehiculeRepository;
+import cibertec.proyecto.repositories.VehiculeStatusRepository;
+import cibertec.proyecto.repositories.VehiculeTypeRepository;
+import cibertec.proyecto.services.VehiculeService;
 
 
 
