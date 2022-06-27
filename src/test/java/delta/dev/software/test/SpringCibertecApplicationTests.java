@@ -28,7 +28,7 @@ import cibertec.proyecto.services.VehiculeService;
 
 
 @SpringBootTest
-class SpringCarFleetManagementApplicationTests {
+class SpringCibertecApplicationTests {
 
 	@Mock
 	VehiculeRepository vehiculeRepository;

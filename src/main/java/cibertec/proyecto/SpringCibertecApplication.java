@@ -12,7 +12,7 @@ import cibertec.proyecto.init.CarFleetInitDB;
  * @author Grupo 4 @
  */
 @SpringBootApplication()
-public class SpringCarFleetManagementApplication implements CommandLineRunner {
+public class SpringCibertecApplication implements CommandLineRunner {
 
 	/**
 	 * CarFleetInitDB
@@ -26,7 +26,7 @@ public class SpringCarFleetManagementApplication implements CommandLineRunner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCarFleetManagementApplication.class, args);
+		SpringApplication.run(SpringCibertecApplication.class, args);
 	}
 
 	/**
