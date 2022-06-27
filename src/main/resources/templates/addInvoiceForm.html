@@ -25,7 +25,7 @@
 
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Client</label> <select
+					<label for="exampleInputEmail1">Cliente</label> <select
 						class="form-control" name="clientid">
 						<option th:each="client:${clients}" th:text="${client.name}"
 							th:value="${client.id}"></option>

@@ -30,7 +30,7 @@
 
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Phone</label> <input name="phone"
+					<label for="exampleInputEmail1">Celular</label> <input name="phone"
 						type="text" class="form-control" id="exampleInputEmail1"
 						aria-describedby="emailHelp" placeholder="Phone">
 				</div>
@@ -50,7 +50,7 @@
 
 				<!-- country -->
 				<div class="form-group">
-					<label for="exampleInputEmail1">Country</label> <select
+					<label for="exampleInputEmail1">Pais</label> <select
 						class="form-control" name="countryid">
 						<option th:each="country:${countries}"
 							th:text="${country.description}" th:value="${country.id}"></option>
@@ -59,7 +59,7 @@
 
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">State</label> <select
+					<label for="exampleInputEmail1">Ciudad</label> <select
 						class="form-control" name="stateid">
 						<option th:each="state:${states}" th:text="${state.name}"
 							th:value="${state.id}"></option>

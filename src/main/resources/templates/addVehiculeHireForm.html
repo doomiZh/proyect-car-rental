@@ -10,7 +10,7 @@
 			<form th:action="@{/addvehiculehire}" method="post">
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Vehicule</label> <select
+					<label for="exampleInputEmail1">Vehiculo</label> <select
 						class="form-control" name="vehicleid">
 						<option th:each="vehicule:${vehicules}" th:text="${vehicule.name}"
 							th:value="${vehicule.id}"></option>
@@ -19,7 +19,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Date Out</label> <input
+					<label for="exampleInputEmail1">Fecha Fin</label> <input
 						name="dateOut" type="date" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Enter email">
@@ -35,7 +35,7 @@
 
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Date In</label> <input
+					<label for="exampleInputEmail1">Fecha Inicio</label> <input
 						name="dateIn" type="date" class="form-control"
 						id="exampleInputEmail1" aria-describedby="emailHelp"
 						placeholder="Enter email">
@@ -49,7 +49,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="exampleInputEmail1">Client</label> <select
+					<label for="exampleInputEmail1">Cliente</label> <select
 						class="form-control" name="clientid">
 						<option th:each="client:${clients}" th:text="${client.name}"
 							th:value="${client.id}"></option>

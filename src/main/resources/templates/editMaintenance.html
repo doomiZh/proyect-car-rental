@@ -74,7 +74,7 @@
 						<ol class="breadcrumb">
 							<li><i class="fa fa-home"></i><a th:href="@{/index}">Inicio</a></li>
 							<li>Vehicule Maintenance</li>
-							<li>Edit</li>
+							<li>Editar</li>
 						</ol>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 						th:object="${vehiculeMaintenance}" method="post">
 
 						<div class="form-group">
-							<label for="exampleInputEmail1">Vehicule</label> <select
+							<label for="exampleInputEmail1">Vehiculo</label> <select
 								class="form-control" name="vehicleid">
 								<option th:each="vehicule:${vehicules}"
 									th:text="${vehicule.name}" th:value="${vehicule.id}"></option>
@@ -110,7 +110,7 @@
 
 
 						<div class="form-group">
-							<label for="exampleInputEmail1">Price</label> <input name="price"
+							<label for="exampleInputEmail1">Precio</label> <input name="price"
 								type="number" class="form-control" id="exampleInputEmail1"
 								aria-describedby="emailHelp" placeholder="Price"
 								th:value="${vehiculeMaintenance.price}">
@@ -131,7 +131,7 @@
 								placeholder="Remarks" th:value="${vehiculeMaintenance.remarks}"></textarea>
 						</div>
 
-						<button type="submit" class="btn btn-primary">Edit</button>
+						<button type="submit" class="btn btn-primary">Editar</button>
 
 
 					</form>
