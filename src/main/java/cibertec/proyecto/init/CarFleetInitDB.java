@@ -1,7 +1,5 @@
 package cibertec.proyecto.init;
 
-import java.util.Date;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,6 @@ import cibertec.proyecto.models.person.JobTitle;
 import cibertec.proyecto.models.user.Userss;
 import cibertec.proyecto.models.vehicule.VehicleModel;
 import cibertec.proyecto.models.vehicule.VehicleStatus;
-import cibertec.proyecto.models.vehicule.VehiculeMaintenance;
 import cibertec.proyecto.models.vehicule.VehiculeType;
 import cibertec.proyecto.repositories.ClientRepository;
 import cibertec.proyecto.repositories.CountryRepository;

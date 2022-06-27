@@ -9,29 +9,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import cibertec.proyecto.models.vehicule.VehicleStatus;
 import cibertec.proyecto.services.VehiculeStatusService;
-/**
- * 
- * @author Grupo 4
- * @version 0.1
- */
+
 @Controller
-public class VehiculeStatusController {
-	/**
-	 * vehiculeStatusService
-	 */
+public class VehicleStatusController {
+
 	@Autowired
 	private VehiculeStatusService vehiculeStatusService;
+
 	
-	/**
-	 * getVehiculeStatus
-	 * @param model
-	 * @return
-	 */
 	@GetMapping("/vehiculestatus")
-	public String getVehiculeStatus(Model model)
+	public String getVehiculeStatusList(Model model)
 	{
-		List<VehicleStatus> vehiculestatuss=vehiculeStatusService.getVehicleStatus();
+		List<VehicleStatus> vehiculestatuss = vehiculeStatusService.getVehicleStatus();
 		model.addAttribute("vehiculestatuss", vehiculestatuss);
+		
 		return "vehicule_status";
 	}
 	

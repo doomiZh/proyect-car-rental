@@ -10,29 +10,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import cibertec.proyecto.models.vehicule.VehiculeType;
 import cibertec.proyecto.services.VehiculeTypeService;
 
-/**
- * 
- * @author Grupo 4
- * @version 0.1
- */
 @Controller
-public class VehiculeTypesController {
+public class VehicleTypeController {
 
-	/**
-	 * vehiculeTypeService
-	 */
 	@Autowired
 	private VehiculeTypeService vehiculeTypeService;
 
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
+	
 	@GetMapping("/vehiculetypes")
-	public String getCountries(Model model) {
+	public String getVehiculeTypeList(Model model) {
+		
 		List<VehiculeType> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
+		
 		return "vehicule_types";
 	}
 

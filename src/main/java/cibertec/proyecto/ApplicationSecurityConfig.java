@@ -13,11 +13,6 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-/**
- * ApplicationSecurityConfig
- * @author Grupo 4
- * @version 0.1
- */
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebSecurity
@@ -30,12 +25,8 @@ extends WebSecurityConfigurerAdapter  {
 	 */
 	@Autowired
 	private UserDetailsService userDetailsService;
+
 	
-	
-	/**
-	 * configure : configuration of http security
-	 * @param http
-	 */
 	@Override
 	protected void configure(HttpSecurity http) 
 			throws Exception {
