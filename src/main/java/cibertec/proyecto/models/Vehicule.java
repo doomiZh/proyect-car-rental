@@ -31,19 +31,19 @@ public class Vehicule {
 	private String name;
 	@ManyToOne
 	@JoinColumn(name = "vehicletypeid", insertable = false, updatable = false)
-	private VehiculeType vehicleType;
+	private VehiculoTipo vehicleType;
 	private Integer vehicletypeid;
 
 	@ManyToOne
 	@JoinColumn(name = "vehiclemodelid", insertable = false, updatable = false)
-	private VehicleModel vehicleModel;
+	private VehiculoModelo vehicleModel;
 	private Integer vehiclemodelid;
 	
 	private String vehicleNumber;
 	
 	@ManyToOne
 	@JoinColumn(name = "vehiclestatusid", insertable = false, updatable = false)
-	private VehicleStatus vehicleStatus;
+	private VehiculoEstado vehicleStatus;
 	private Integer vehiclestatusid;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -51,8 +51,8 @@ public class Vehicule {
 	
 	private String description;
 
-	public Vehicule(int id, String name, VehiculeType vehicleType, Integer vehicletypeid, VehicleModel vehicleModel,
-			Integer vehiclemodelid, String vehicleNumber, VehicleStatus vehicleStatus, Integer vehiclestatusid,
+	public Vehicule(int id, String name, VehiculoTipo vehicleType, Integer vehicletypeid, VehiculoModelo vehicleModel,
+			Integer vehiclemodelid, String vehicleNumber, VehiculoEstado vehicleStatus, Integer vehiclestatusid,
 			Date acquisitionDate, String description) {
 		super();
 		this.id = id;
@@ -88,11 +88,11 @@ public class Vehicule {
 		this.name = name;
 	}
 
-	public VehiculeType getVehicleType() {
+	public VehiculoTipo getVehicleType() {
 		return vehicleType;
 	}
 
-	public void setVehicleType(VehiculeType vehicleType) {
+	public void setVehicleType(VehiculoTipo vehicleType) {
 		this.vehicleType = vehicleType;
 	}
 
@@ -104,11 +104,11 @@ public class Vehicule {
 		this.vehicletypeid = vehicletypeid;
 	}
 
-	public VehicleModel getVehicleModel() {
+	public VehiculoModelo getVehicleModel() {
 		return vehicleModel;
 	}
 
-	public void setVehicleModel(VehicleModel vehicleModel) {
+	public void setVehicleModel(VehiculoModelo vehicleModel) {
 		this.vehicleModel = vehicleModel;
 	}
 
@@ -128,11 +128,11 @@ public class Vehicule {
 		this.vehicleNumber = vehicleNumber;
 	}
 
-	public VehicleStatus getVehicleStatus() {
+	public VehiculoEstado getVehicleStatus() {
 		return vehicleStatus;
 	}
 
-	public void setVehicleStatus(VehicleStatus vehicleStatus) {
+	public void setVehicleStatus(VehiculoEstado vehicleStatus) {
 		this.vehicleStatus = vehicleStatus;
 	}
 

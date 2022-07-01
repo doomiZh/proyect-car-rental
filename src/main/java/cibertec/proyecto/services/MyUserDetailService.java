@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.UserPrincipal;
-import cibertec.proyecto.models.Userss;
+import cibertec.proyecto.models.Usuario;
 import cibertec.proyecto.repositories.UserRepository;
 
 /**
@@ -32,7 +32,7 @@ public class MyUserDetailService implements UserDetailsService {
 	 */
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Userss user=userRepository.findByUsername(username);
+		Usuario user=userRepository.findByUsername(username);
 		
 		if(user==null)
 		{

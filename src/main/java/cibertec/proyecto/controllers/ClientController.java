@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.Client;
+import cibertec.proyecto.models.Cliente;
 import cibertec.proyecto.services.ClientService;
 
 /**
@@ -37,7 +37,7 @@ public class ClientController {
 	 */
 	@GetMapping("/clients")
 	public String getClients(Model model) {
-		List<Client> clients = clientService.getClients();
+		List<Cliente> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
 		
 		return "clients";
@@ -50,7 +50,7 @@ public class ClientController {
 	 */
 	@PostMapping("/addclient")
 
-	public String addClient(Client client) {
+	public String addClient(Cliente client) {
 		clientService.save(client);
 		
 		return "redirect:/clients";
@@ -64,7 +64,7 @@ public class ClientController {
 	 */
 	@RequestMapping("/client/{id}")
 	public String findById(@PathVariable("id") int id, Model model) {
-		Client client = clientService.findById(id).get();
+		Cliente client = clientService.findById(id).get();
 		model.addAttribute("client", client);
 		
 		return "editClient";
@@ -79,7 +79,7 @@ public class ClientController {
 	 * @return
 	 */
 	@PostMapping("/updateclient/{id}")
-	public String updateClient(@PathVariable("id") long id, @Validated Client client, BindingResult result,
+	public String updateClient(@PathVariable("id") long id, @Validated Cliente client, BindingResult result,
 			Model model) {
 
 		clientService.save(client);

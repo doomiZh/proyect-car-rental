@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import cibertec.proyecto.models.Client;
+import cibertec.proyecto.models.Cliente;
 import cibertec.proyecto.services.ClientService;
 
 @RestController
@@ -24,18 +24,18 @@ public class ClientApiController {
 	@Autowired
 	private ClientService clientService;
 
-	public List<Client> getClientsTypeList() {
+	public List<Cliente> getClientsTypeList() {
 		return clientService.getClients();
 	}
 	
 	@GetMapping("{id}")
-	public Optional<Client> obtenerClient(@PathVariable int id) {
+	public Optional<Cliente> obtenerClient(@PathVariable int id) {
 		return clientService.findById(id);
 	}
 	
 	@PostMapping
-	public ResponseEntity<Client> registrar(@RequestBody Client client) {
-		Client clientGuard = clientService.save(client);
+	public ResponseEntity<Cliente> registrar(@RequestBody Cliente client) {
+		Cliente clientGuard = clientService.save(client);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(clientGuard.getId()).toUri();
@@ -44,7 +44,7 @@ public class ClientApiController {
 	}
 	
 	@DeleteMapping("{id}")
-	public ResponseEntity<Client> deleteById(@PathVariable int id) {
+	public ResponseEntity<Cliente> deleteById(@PathVariable int id) {
 		clientService.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}

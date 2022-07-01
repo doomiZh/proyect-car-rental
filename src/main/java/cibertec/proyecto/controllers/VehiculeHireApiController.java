@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import cibertec.proyecto.models.VehiculeHire;
+import cibertec.proyecto.models.Alquiler;
 import cibertec.proyecto.services.VehiculeHireService;
 
 @RestController
@@ -25,18 +25,18 @@ public class VehiculeHireApiController {
 	@Autowired
 	private VehiculeHireService vehiculehireService;
 
-	public List<VehiculeHire> getVehiculeTypeList() {
+	public List<Alquiler> getVehiculeTypeList() {
 		return vehiculehireService.getVehiculeHires();
 	}
 	
 	@GetMapping("{id}")
-	public Optional<VehiculeHire> obtenerVehiculeHire(@PathVariable int id) {
+	public Optional<Alquiler> obtenerVehiculeHire(@PathVariable int id) {
 		return vehiculehireService.findById(id);
 	}
 	
 	@PostMapping
-	public ResponseEntity<VehiculeHire> registrar(@RequestBody VehiculeHire hire) {
-		VehiculeHire vehiculehireGuard = vehiculehireService.save(hire);
+	public ResponseEntity<Alquiler> registrar(@RequestBody Alquiler hire) {
+		Alquiler vehiculehireGuard = vehiculehireService.save(hire);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(vehiculehireGuard.getId()).toUri();
@@ -45,7 +45,7 @@ public class VehiculeHireApiController {
 	}
 	
 	@DeleteMapping("{id}")
-	public ResponseEntity<VehiculeHire> deleteById(@PathVariable int id) {
+	public ResponseEntity<Alquiler> deleteById(@PathVariable int id) {
 		vehiculehireService.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}

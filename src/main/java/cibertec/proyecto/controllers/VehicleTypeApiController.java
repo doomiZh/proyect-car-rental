@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cibertec.proyecto.models.VehiculeType;
+import cibertec.proyecto.models.VehiculoTipo;
 import cibertec.proyecto.services.VehiculeTypeService;
 
 @RestController
@@ -16,7 +16,7 @@ public class VehicleTypeApiController {
 	private VehiculeTypeService vehiculeTypeService;
 
 	@GetMapping("/api/vehicle-types")
-	public List<VehiculeType> getVehiculeTypeList() {
+	public List<VehiculoTipo> getVehiculeTypeList() {
 		return vehiculeTypeService.getVehiculeTypes();
 	}
 	

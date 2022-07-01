@@ -3,7 +3,7 @@ package cibertec.proyecto.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.Userss;
+import cibertec.proyecto.models.Usuario;
 import cibertec.proyecto.repositories.UserRepository;
 /**
  * 
@@ -23,7 +23,7 @@ public class UserService {
 	 * save
 	 * @param user
 	 */
-	public void save(Userss user)
+	public void save(Usuario user)
 	{
 		userRepository.save(user);
 	}

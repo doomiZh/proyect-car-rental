@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cibertec.proyecto.models.VehicleStatus;
+import cibertec.proyecto.models.VehiculoEstado;
 import cibertec.proyecto.services.VehiculeStatusService;
 
 @RestController
@@ -17,7 +17,7 @@ public class VehicleStatusApiController {
 
 	
 	@GetMapping("/api/vehicle-statuses")
-	public List<VehicleStatus> getVehiculeStatusList() {
+	public List<VehiculoEstado> getVehiculeStatusList() {
 		return vehiculeStatusService.getVehicleStatus();
 	}
 	

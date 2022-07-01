@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.Client;
+import cibertec.proyecto.models.Cliente;
 import cibertec.proyecto.models.Vehicule;
-import cibertec.proyecto.models.VehiculeHire;
+import cibertec.proyecto.models.Alquiler;
 import cibertec.proyecto.services.ClientService;
 import cibertec.proyecto.services.VehiculeHireService;
 import cibertec.proyecto.services.VehiculeService;
@@ -56,13 +56,13 @@ public class VehiculeHireController {
 	 */
 	@GetMapping("/vehiculehire")
 	public String getVehicules(Model model) {
-		List<VehiculeHire> vehiculehires = vehiculeHireService.getVehiculeHires();
+		List<Alquiler> vehiculehires = vehiculeHireService.getVehiculeHires();
 		model.addAttribute("vehiculehires", vehiculehires);
 
 		List<Vehicule> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
 
-		List<Client> clients = clientService.getClients();
+		List<Cliente> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
 
 		return "vehicule_hires";
@@ -75,7 +75,7 @@ public class VehiculeHireController {
 	 * @return
 	 */
 	@PostMapping("/addvehiculehire")
-	public String addVehiculeHire(VehiculeHire vehiculeHire) {
+	public String addVehiculeHire(Alquiler vehiculeHire) {
 		vehiculeHireService.save(vehiculeHire);
 		return "redirect:/vehiculehire";
 	}
@@ -93,10 +93,10 @@ public class VehiculeHireController {
 		List<Vehicule> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
 
-		List<Client> clients = clientService.getClients();
+		List<Cliente> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
 
-		VehiculeHire vehiculeHire = vehiculeHireService.findById(id).get();
+		Alquiler vehiculeHire = vehiculeHireService.findById(id).get();
 		model.addAttribute("vehiculeHire", vehiculeHire);
 		return "editHire";
 	}
@@ -111,7 +111,7 @@ public class VehiculeHireController {
 	 * @return
 	 */
 	@PostMapping("/updatevehiculehire/{id}")
-	public String updateVehiculeHire(@PathVariable("id") long id, @Validated VehiculeHire vehicule,
+	public String updateVehiculeHire(@PathVariable("id") long id, @Validated Alquiler vehicule,
 			BindingResult result, Model model) {
 
 		vehiculeHireService.save(vehicule);

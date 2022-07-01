@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.Client;
+import cibertec.proyecto.models.Cliente;
 import cibertec.proyecto.repositories.ClientRepository;
 /**
  * 
@@ -27,7 +27,7 @@ public class ClientService {
 	 * getClients
 	 * @return
 	 */
-	public List<Client> getClients()
+	public List<Cliente> getClients()
 	{
 		
 		return clientRepository.findAll();
@@ -47,7 +47,7 @@ public class ClientService {
 	 * @param client
 	 * @return 
 	 */
-	public Client save(Client client)
+	public Cliente save(Cliente client)
 	{
 		return clientRepository.save(client);
 	}
@@ -57,7 +57,7 @@ public class ClientService {
      * @param id
      * @return
      */
-	public Optional<Client> findById(int id) {
+	public Optional<Cliente> findById(int id) {
 		return clientRepository.findById(id);
 	}
 

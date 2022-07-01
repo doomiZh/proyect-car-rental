@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.VehiculeHire;
+import cibertec.proyecto.models.Alquiler;
 import cibertec.proyecto.repositories.VehiculeHireRepository;
 
 /**
@@ -28,7 +28,7 @@ public class VehiculeHireService {
 	 * 
 	 * @return
 	 */
-	public List<VehiculeHire> getVehiculeHires() {
+	public List<Alquiler> getVehiculeHires() {
 		return vehiculeHireRepository.findAll();
 	}
 
@@ -38,7 +38,7 @@ public class VehiculeHireService {
 	 * @param hire
 	 * @return 
 	 */
-	public VehiculeHire save(VehiculeHire hire) {
+	public Alquiler save(Alquiler hire) {
 		return vehiculeHireRepository.save(hire);
 	}
 
@@ -48,7 +48,7 @@ public class VehiculeHireService {
 	 * @param id
 	 * @return
 	 */
-	public Optional<VehiculeHire> findById(int id) {
+	public Optional<Alquiler> findById(int id) {
 		return vehiculeHireRepository.findById(id);
 	}
 

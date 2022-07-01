@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class VehiculeHire {
+public class Alquiler {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,7 +47,7 @@ public class VehiculeHire {
 
 	@ManyToOne
 	@JoinColumn(name = "clientid", insertable = false, updatable = false)
-	private Client client;
+	private Cliente client;
 	
 	private Integer clientid;
 
@@ -55,8 +55,8 @@ public class VehiculeHire {
 
 	private String remarks;
 
-	public VehiculeHire(int id, Vehicule vehicle, Integer vehicleid, Date dateOut, Date timeOut, Date dateIn,
-			Date timeIn, Client client, Integer clientid, Double price, String remarks) {
+	public Alquiler(int id, Vehicule vehicle, Integer vehicleid, Date dateOut, Date timeOut, Date dateIn,
+			Date timeIn, Cliente client, Integer clientid, Double price, String remarks) {
 		super();
 		this.id = id;
 		this.vehicle = vehicle;
@@ -71,7 +71,7 @@ public class VehiculeHire {
 		this.remarks = remarks;
 	}
 
-	public VehiculeHire() {
+	public Alquiler() {
 		super();
 	}
 
@@ -131,11 +131,11 @@ public class VehiculeHire {
 		this.timeIn = timeIn;
 	}
 
-	public Client getClient() {
+	public Cliente getClient() {
 		return client;
 	}
 
-	public void setClient(Client client) {
+	public void setClient(Cliente client) {
 		this.client = client;
 	}
 

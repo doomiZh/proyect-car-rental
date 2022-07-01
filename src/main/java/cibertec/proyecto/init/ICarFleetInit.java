@@ -6,7 +6,6 @@ package cibertec.proyecto.init;
  */
 public interface ICarFleetInit {
     void initUsers();
-    void initInvoiceStatus();
     void initVehiculeModel();
     void initVehiculeStatus();
     void initVehiculeType();

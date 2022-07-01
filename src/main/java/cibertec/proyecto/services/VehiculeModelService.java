@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.VehicleModel;
+import cibertec.proyecto.models.VehiculoModelo;
 import cibertec.proyecto.repositories.VehiculeModelRepository;
 
 /**
@@ -26,7 +26,7 @@ public class VehiculeModelService {
 	 * getVehiculeModels
 	 * @return
 	 */
-	public List<VehicleModel> getVehiculeModels() {
+	public List<VehiculoModelo> getVehiculeModels() {
 		return vehiculeModelRepository.findAll();
 	}
 

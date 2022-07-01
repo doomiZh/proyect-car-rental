@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import cibertec.proyecto.models.VehiculeType;
+import cibertec.proyecto.models.VehiculoTipo;
 import cibertec.proyecto.services.VehiculeTypeService;
 
 @Controller
@@ -20,7 +20,7 @@ public class VehicleTypeController {
 	@GetMapping("/vehiculetypes")
 	public String getVehiculeTypeList(Model model) {
 		
-		List<VehiculeType> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
+		List<VehiculoTipo> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
 		
 		return "vehicule_types";

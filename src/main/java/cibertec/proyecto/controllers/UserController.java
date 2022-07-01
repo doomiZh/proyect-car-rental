@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
-import cibertec.proyecto.models.Userss;
+import cibertec.proyecto.models.Usuario;
 import cibertec.proyecto.services.UserService;
 
 /**
@@ -41,7 +41,7 @@ public class UserController {
 	 * @return
 	 */
 	@PostMapping(value="/adduser")
-	public RedirectView addUser(Userss user, RedirectAttributes redir) {
+	public RedirectView addUser(Usuario user, RedirectAttributes redir) {
 		userService.save(user);	
 		RedirectView  redirectView= new RedirectView("/login",true);
 	        

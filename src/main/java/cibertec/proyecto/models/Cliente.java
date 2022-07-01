@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Client {
+public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +30,7 @@ public class Client {
 	private String address;
 	private String details;
 	
-	public Client(int id, String name, String number, String phone, String email, String address, String details) {
+	public Cliente(int id, String name, String number, String phone, String email, String address, String details) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -41,7 +41,7 @@ public class Client {
 		this.details = details;
 	}
 
-	public Client() {
+	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
 
