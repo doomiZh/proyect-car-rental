@@ -18,8 +18,6 @@ import cibertec.proyecto.models.VehicleModel;
 import cibertec.proyecto.models.VehicleStatus;
 import cibertec.proyecto.models.Vehicule;
 import cibertec.proyecto.models.VehiculeType;
-import cibertec.proyecto.services.EmployeeService;
-import cibertec.proyecto.services.LocationService;
 import cibertec.proyecto.services.VehiculeModelService;
 import cibertec.proyecto.services.VehiculeService;
 import cibertec.proyecto.services.VehiculeStatusService;
@@ -39,18 +37,6 @@ public class VehiculeController {
 	 */
 	@Autowired
 	VehiculeTypeService vehiculeTypeService;
-
-	/**
-	 * employeeService
-	 */
-	@Autowired
-	EmployeeService employeeService;
-
-	/**
-	 * locationService
-	 */
-	@Autowired
-	LocationService locationService;
 
 	/**
 	 * vehiculeModelService

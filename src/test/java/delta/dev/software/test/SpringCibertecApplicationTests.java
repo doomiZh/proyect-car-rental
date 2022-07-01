@@ -17,8 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import cibertec.proyecto.models.Vehicule;
-import cibertec.proyecto.repositories.EmployeeRepository;
-import cibertec.proyecto.repositories.LocationRepository;
 import cibertec.proyecto.repositories.VehiculeModelRepository;
 import cibertec.proyecto.repositories.VehiculeRepository;
 import cibertec.proyecto.repositories.VehiculeStatusRepository;
@@ -43,12 +41,6 @@ class SpringCibertecApplicationTests {
 	VehiculeStatusRepository vehiculeStatusRepository;
 
 	@Autowired
-	EmployeeRepository employeeRepository;
-
-	@Autowired
 	VehiculeModelRepository vehiculeModelRepository;
-
-	@Autowired
-	LocationRepository locationRepository;
 	
 }

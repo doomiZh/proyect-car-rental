@@ -10,18 +10,11 @@ import cibertec.proyecto.models.Userss;
 import cibertec.proyecto.models.VehicleModel;
 import cibertec.proyecto.models.VehicleStatus;
 import cibertec.proyecto.models.VehiculeType;
-import cibertec.proyecto.models.person.EmployeeType;
-import cibertec.proyecto.models.person.JobTitle;
 import cibertec.proyecto.repositories.ClientRepository;
-import cibertec.proyecto.repositories.EmployeeRepository;
-import cibertec.proyecto.repositories.EmployeeTypeRepository;
 import cibertec.proyecto.repositories.InvoiceRepository;
 import cibertec.proyecto.repositories.InvoiceStatusRepository;
-import cibertec.proyecto.repositories.JobTitleRepository;
-import cibertec.proyecto.repositories.SupplierRepository;
 import cibertec.proyecto.repositories.UserRepository;
 import cibertec.proyecto.repositories.VehiculeHireRepository;
-import cibertec.proyecto.repositories.VehiculeMaintenanceRepository;
 import cibertec.proyecto.repositories.VehiculeModelRepository;
 import cibertec.proyecto.repositories.VehiculeRepository;
 import cibertec.proyecto.repositories.VehiculeStatusRepository;
@@ -38,64 +31,40 @@ public class CarFleetInitDB implements ICarFleetInit {
 	
 	@Autowired
 	UserRepository userRepository;
+	
 	@Autowired
 	ClientRepository clientRepository;
+	
 	@Autowired
 	InvoiceStatusRepository   invoiceStatusRepository;
+	
 	@Autowired
 	InvoiceRepository invoiceRepository;
-	@Autowired
-	JobTitleRepository jobTitleRepository;
-	@Autowired
-	EmployeeTypeRepository  employeeTypeRepository;
-	@Autowired
-	SupplierRepository supplierRepository;
+
 	@Autowired
 	VehiculeModelRepository vehiculeModelRepository;
+	
 	@Autowired
 	VehiculeStatusRepository vehiculeStatusRepository;
+	
 	@Autowired
 	VehiculeTypeRepository  vehiculeTypeRepository;
-	@Autowired
-	EmployeeRepository  employeeRepository;
+
 	@Autowired
 	VehiculeRepository vehiculeRepository;
+	
 	@Autowired
 	VehiculeHireRepository vehiculeHireRepository;
-	@Autowired
-	VehiculeMaintenanceRepository  vehiculeMaintenanceRepository;
 	
 	/**
 	 * initUsers
 	 */
 	@Override
 	public void initUsers() {
-	Userss user =new Userss(1, "admin", "admin");
-	Userss user2 =new Userss(2, "user", "user");
-	userRepository.save(user);
-	userRepository.save(user2);
-	}
-
-	/**
-	 * initEmployeeTypes
-	 */
-	@Override
-	public void initEmployeeTypes() {
-	   EmployeeType employeeType1=new EmployeeType(1,"Full-Time","Full-Time");
-	   EmployeeType employeeType2=new EmployeeType(2,"Part-Time","Part-Time");
-	   employeeTypeRepository.save(employeeType1);
-	   employeeTypeRepository.save(employeeType2);
-	}
-
-	/**
-	 * initJobTitles
-	 */
-	@Override
-	public void initJobTitles() {
-		JobTitle jobTitle=new JobTitle(1, "Manager", "Manager");
-		JobTitle jobTitle2=new JobTitle(2, "Executive", "Executive");
-		jobTitleRepository.save(jobTitle);
-		jobTitleRepository.save(jobTitle2);
+		Userss user =new Userss(1, "admin", "admin");
+		Userss user2 =new Userss(2, "user", "user");
+		userRepository.save(user);
+		userRepository.save(user2);
 	}
 
 	/**

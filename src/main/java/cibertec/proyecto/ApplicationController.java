@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import cibertec.proyecto.services.ClientService;
-import cibertec.proyecto.services.EmployeeService;
-import cibertec.proyecto.services.SupplierService;
 import cibertec.proyecto.services.VehiculeService;
 
 /**
@@ -19,22 +17,10 @@ import cibertec.proyecto.services.VehiculeService;
 public class ApplicationController {
 
 	/**
-	 * EmployeeService
-	 */
-	@Autowired
-	EmployeeService employeeService;
-
-	/**
 	 * @ ClientService
 	 */
 	@Autowired
 	ClientService clientService;
-
-	/**
-	 * supplierService
-	 */
-	@Autowired
-	SupplierService supplierService;
 
 	/**
 	 * vehiculeService
@@ -50,9 +36,7 @@ public class ApplicationController {
 	 */
 	@GetMapping("/index")
 	public String index(Model model) {
-		model.addAttribute("employee_nb", employeeService.getCount());
 		model.addAttribute("client_nb", clientService.getCount());
-		model.addAttribute("supplier_nb", supplierService.getCount());
 		model.addAttribute("vehicle_nb", vehiculeService.getCount());
 		return "index";
 	}

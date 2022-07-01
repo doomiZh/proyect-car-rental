@@ -22,11 +22,9 @@ public class SpringCibertecApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		carFleetInit.initUsers();
-		carFleetInit.initJobTitles();
 		carFleetInit.initVehiculeStatus();
 		carFleetInit.initVehiculeModel();
 		carFleetInit.initVehiculeType();
-		carFleetInit.initEmployeeTypes();
 		carFleetInit.initInvoiceStatus();
 	}
 

@@ -17,9 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import cibertec.proyecto.models.Client;
 import cibertec.proyecto.models.Vehicule;
 import cibertec.proyecto.models.VehiculeHire;
-import cibertec.proyecto.models.country.Location;
 import cibertec.proyecto.services.ClientService;
-import cibertec.proyecto.services.LocationService;
 import cibertec.proyecto.services.VehiculeHireService;
 import cibertec.proyecto.services.VehiculeService;
 
@@ -51,12 +49,6 @@ public class VehiculeHireController {
 	ClientService clientService;
 
 	/**
-	 * locationService
-	 */
-	@Autowired
-	LocationService locationService;
-
-	/**
 	 * getVehicules
 	 * 
 	 * @param model
@@ -72,9 +64,6 @@ public class VehiculeHireController {
 
 		List<Client> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
-
-		List<Location> locations = locationService.getLocations();
-		model.addAttribute("locations", locations);
 
 		return "vehicule_hires";
 	}
@@ -106,9 +95,6 @@ public class VehiculeHireController {
 
 		List<Client> clients = clientService.getClients();
 		model.addAttribute("clients", clients);
-
-		List<Location> locations = locationService.getLocations();
-		model.addAttribute("locations", locations);
 
 		VehiculeHire vehiculeHire = vehiculeHireService.findById(id).get();
 		model.addAttribute("vehiculeHire", vehiculeHire);
