@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Vehicule {
+public class Vehiculo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,7 +51,7 @@ public class Vehicule {
 	
 	private String description;
 
-	public Vehicule(int id, String name, VehiculoTipo vehicleType, Integer vehicletypeid, VehiculoModelo vehicleModel,
+	public Vehiculo(int id, String name, VehiculoTipo vehicleType, Integer vehicletypeid, VehiculoModelo vehicleModel,
 			Integer vehiclemodelid, String vehicleNumber, VehiculoEstado vehicleStatus, Integer vehiclestatusid,
 			Date acquisitionDate, String description) {
 		super();
@@ -68,7 +68,7 @@ public class Vehicule {
 		this.description = description;
 	}
 
-	public Vehicule() {
+	public Vehiculo() {
 		super();
 	}
 

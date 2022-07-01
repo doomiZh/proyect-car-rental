@@ -31,7 +31,7 @@ public class Alquiler {
 
 	@ManyToOne
 	@JoinColumn(name = "vehicleid", insertable = false, updatable = false)
-	private Vehicule vehicle;
+	private Vehiculo vehicle;
 	
 	private Integer vehicleid;
 
@@ -55,7 +55,7 @@ public class Alquiler {
 
 	private String remarks;
 
-	public Alquiler(int id, Vehicule vehicle, Integer vehicleid, Date dateOut, Date timeOut, Date dateIn,
+	public Alquiler(int id, Vehiculo vehicle, Integer vehicleid, Date dateOut, Date timeOut, Date dateIn,
 			Date timeIn, Cliente client, Integer clientid, Double price, String remarks) {
 		super();
 		this.id = id;
@@ -83,11 +83,11 @@ public class Alquiler {
 		this.id = id;
 	}
 
-	public Vehicule getVehicle() {
+	public Vehiculo getVehicle() {
 		return vehicle;
 	}
 
-	public void setVehicle(Vehicule vehicle) {
+	public void setVehicle(Vehiculo vehicle) {
 		this.vehicle = vehicle;
 	}
 

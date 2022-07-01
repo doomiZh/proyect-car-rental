@@ -9,13 +9,13 @@ import cibertec.proyecto.models.Usuario;
 import cibertec.proyecto.models.VehiculoModelo;
 import cibertec.proyecto.models.VehiculoEstado;
 import cibertec.proyecto.models.VehiculoTipo;
-import cibertec.proyecto.repositories.ClientRepository;
-import cibertec.proyecto.repositories.UserRepository;
-import cibertec.proyecto.repositories.VehiculeHireRepository;
-import cibertec.proyecto.repositories.VehiculeModelRepository;
+import cibertec.proyecto.repositories.ClienteRepository;
+import cibertec.proyecto.repositories.UsuarioRepository;
+import cibertec.proyecto.repositories.AlquilerRepository;
+import cibertec.proyecto.repositories.VehiculoModeloRepository;
 import cibertec.proyecto.repositories.VehiculeRepository;
-import cibertec.proyecto.repositories.VehiculeStatusRepository;
-import cibertec.proyecto.repositories.VehiculeTypeRepository;
+import cibertec.proyecto.repositories.VehiculoEstadoRepository;
+import cibertec.proyecto.repositories.VehiculoTipoRepository;
 
 /**
  * 
@@ -27,25 +27,25 @@ import cibertec.proyecto.repositories.VehiculeTypeRepository;
 public class CarFleetInitDB implements ICarFleetInit {
 	
 	@Autowired
-	UserRepository userRepository;
+	UsuarioRepository userRepository;
 	
 	@Autowired
-	ClientRepository clientRepository;
+	ClienteRepository clientRepository;
 
 	@Autowired
-	VehiculeModelRepository vehiculeModelRepository;
+	VehiculoModeloRepository vehiculeModelRepository;
 	
 	@Autowired
-	VehiculeStatusRepository vehiculeStatusRepository;
+	VehiculoEstadoRepository vehiculeStatusRepository;
 	
 	@Autowired
-	VehiculeTypeRepository  vehiculeTypeRepository;
+	VehiculoTipoRepository  vehiculeTypeRepository;
 
 	@Autowired
 	VehiculeRepository vehiculeRepository;
 	
 	@Autowired
-	VehiculeHireRepository vehiculeHireRepository;
+	AlquilerRepository vehiculeHireRepository;
 	
 	/**
 	 * initUsers

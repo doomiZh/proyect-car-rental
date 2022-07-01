@@ -3,7 +3,7 @@ package cibertec.proyecto.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import cibertec.proyecto.models.VehiculoModelo;
+import cibertec.proyecto.models.VehiculoEstado;
 
 /**
  * 
@@ -11,6 +11,6 @@ import cibertec.proyecto.models.VehiculoModelo;
  *
  */
 @Repository
-public interface VehiculeModelRepository extends JpaRepository<VehiculoModelo, Integer> {
+public interface VehiculoEstadoRepository extends JpaRepository<VehiculoEstado, Integer> {
 
 }

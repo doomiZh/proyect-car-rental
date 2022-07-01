@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.Usuario;
-import cibertec.proyecto.repositories.UserRepository;
+import cibertec.proyecto.repositories.UsuarioRepository;
 /**
  * 
  * @author grupo 4
@@ -17,7 +17,7 @@ public class UserService {
 	 * userRepository
 	 */
 	@Autowired
-	UserRepository userRepository;
+	UsuarioRepository userRepository;
 	
 	/**
 	 * save

@@ -3,14 +3,14 @@ package cibertec.proyecto.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import cibertec.proyecto.models.Usuario;
+import cibertec.proyecto.models.VehiculoTipo;
 
 /**
  * 
- * @author grupo 4
+ * @author VehiculeTypeRepository
  *
  */
 @Repository
-public interface UserRepository extends JpaRepository<Usuario, Integer> {
-  Usuario findByUsername(String username);
+public interface VehiculoTipoRepository extends JpaRepository<VehiculoTipo, Integer> {
+
 }

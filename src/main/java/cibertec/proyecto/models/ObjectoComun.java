@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @MappedSuperclass
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class CommonObject extends Auditable<String>{
+public class ObjectoComun extends Auditoria<String>{
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,11 @@ public class CommonObject extends Auditable<String>{
 	private String details;
 	
 	
-	public CommonObject() {
+	public ObjectoComun() {
 		
 	}
 	
-	public CommonObject(Integer id, String description, String details) {
+	public ObjectoComun(Integer id, String description, String details) {
 		this.id = id;
 		this.description = description;
 		this.details = details;

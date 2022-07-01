@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.VehiculoTipo;
-import cibertec.proyecto.repositories.VehiculeTypeRepository;
+import cibertec.proyecto.repositories.VehiculoTipoRepository;
 
 /**
  * 
@@ -20,7 +20,7 @@ public class VehiculeTypeService {
 	 * vehiculeTypeRepository
 	 */
 	@Autowired
-	private VehiculeTypeRepository vehiculeTypeRepository;
+	private VehiculoTipoRepository vehiculeTypeRepository;
 
 	/**
 	 * getVehiculeTypes

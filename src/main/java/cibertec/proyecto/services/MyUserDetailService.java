@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.UserPrincipal;
 import cibertec.proyecto.models.Usuario;
-import cibertec.proyecto.repositories.UserRepository;
+import cibertec.proyecto.repositories.UsuarioRepository;
 
 /**
  * 
@@ -22,7 +22,7 @@ public class MyUserDetailService implements UserDetailsService {
 	 * userRepository
 	 */
 	@Autowired
-	UserRepository userRepository;
+	UsuarioRepository userRepository;
 	
 	/**
 	 * loadUserByUsername

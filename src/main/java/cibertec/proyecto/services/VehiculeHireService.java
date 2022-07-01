@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.Alquiler;
-import cibertec.proyecto.repositories.VehiculeHireRepository;
+import cibertec.proyecto.repositories.AlquilerRepository;
 
 /**
  * 
@@ -21,7 +21,7 @@ public class VehiculeHireService {
 	 * 
 	 */
 	@Autowired
-	private VehiculeHireRepository vehiculeHireRepository;
+	private AlquilerRepository vehiculeHireRepository;
 
 	/**
 	 * getVehiculeHires

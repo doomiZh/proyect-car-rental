@@ -10,6 +10,6 @@ import cibertec.proyecto.models.Cliente;
  * @version 0.1
  */
 @Repository
-public interface ClientRepository extends JpaRepository<Cliente, Integer> {
+public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
 }

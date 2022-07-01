@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.services.VehiculeService;
 
 @RestController
@@ -25,18 +25,18 @@ public class VehiculeApiController {
 	@Autowired
 	private VehiculeService vehiculeService;
 
-	public List<Vehicule> getVehiculeTypeList() {
+	public List<Vehiculo> getVehiculeTypeList() {
 		return vehiculeService.getVehicules();
 	}
 	
 	@GetMapping("{id}")
-	public Optional<Vehicule> obtenerVehicule(@PathVariable int id) {
+	public Optional<Vehiculo> obtenerVehicule(@PathVariable int id) {
 		return vehiculeService.findById(id);
 	}
 	
 	@PostMapping
-	public ResponseEntity<Vehicule> registrar(@RequestBody Vehicule vehicule) {
-		Vehicule vehiculeGuard = vehiculeService.save(vehicule);
+	public ResponseEntity<Vehiculo> registrar(@RequestBody Vehiculo vehicule) {
+		Vehiculo vehiculeGuard = vehiculeService.save(vehicule);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(vehiculeGuard.getId()).toUri();
@@ -45,7 +45,7 @@ public class VehiculeApiController {
 	}
 	
 	@DeleteMapping("{id}")
-	public ResponseEntity<Vehicule> deleteById(@PathVariable int id) {
+	public ResponseEntity<Vehiculo> deleteById(@PathVariable int id) {
 		vehiculeService.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}

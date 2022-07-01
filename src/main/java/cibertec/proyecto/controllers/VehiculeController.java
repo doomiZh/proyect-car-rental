@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.VehiculoModelo;
 import cibertec.proyecto.models.VehiculoEstado;
-import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.models.VehiculoTipo;
 import cibertec.proyecto.services.VehiculeModelService;
 import cibertec.proyecto.services.VehiculeService;
@@ -58,7 +58,7 @@ public class VehiculeController {
 	 */
 	@GetMapping("/vehicules")
 	public String getVehicules(Model model) {
-		List<Vehicule> vehicules = vehiculeService.getVehicules();
+		List<Vehiculo> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
 		
 		List<VehiculoTipo> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
@@ -80,7 +80,7 @@ public class VehiculeController {
 	 * @return
 	 */
 	@PostMapping("/addvehicule")
-	public String addVehicule(Vehicule v) {
+	public String addVehicule(Vehiculo v) {
 		vehiculeService.save(v);
 		return "redirect:/vehicules";
 	}
@@ -103,7 +103,7 @@ public class VehiculeController {
 		List<VehiculoEstado> vehiculeStatus = vehiculeStatusService.getVehicleStatus();
 		model.addAttribute("vehiculeStatus", vehiculeStatus);
 		
-		Vehicule vehicule = vehiculeService.findById(id).get();
+		Vehiculo vehicule = vehiculeService.findById(id).get();
 		model.addAttribute("vehicule", vehicule);
 		
 		return "editVehicule";
@@ -119,7 +119,7 @@ public class VehiculeController {
 	 * @return
 	 */
 	@PostMapping("/updatevehicule/{id}")
-	public String updateVehicule(@PathVariable("id") long id, @Validated Vehicule vehicule, BindingResult result,
+	public String updateVehicule(@PathVariable("id") long id, @Validated Vehiculo vehicule, BindingResult result,
 			Model model) {
 
 		vehiculeService.save(vehicule);

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.Cliente;
-import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.models.Alquiler;
 import cibertec.proyecto.services.ClientService;
 import cibertec.proyecto.services.VehiculeHireService;
@@ -59,7 +59,7 @@ public class VehiculeHireController {
 		List<Alquiler> vehiculehires = vehiculeHireService.getVehiculeHires();
 		model.addAttribute("vehiculehires", vehiculehires);
 
-		List<Vehicule> vehicules = vehiculeService.getVehicules();
+		List<Vehiculo> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
 
 		List<Cliente> clients = clientService.getClients();
@@ -90,7 +90,7 @@ public class VehiculeHireController {
 	@RequestMapping("/vehiculehire/{id}")
 	public String findById(@PathVariable("id") int id, Model model) {
 
-		List<Vehicule> vehicules = vehiculeService.getVehicules();
+		List<Vehiculo> vehicules = vehiculeService.getVehicules();
 		model.addAttribute("vehicules", vehicules);
 
 		List<Cliente> clients = clientService.getClients();

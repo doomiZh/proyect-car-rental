@@ -16,11 +16,11 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import cibertec.proyecto.models.Vehicule;
-import cibertec.proyecto.repositories.VehiculeModelRepository;
+import cibertec.proyecto.models.Vehiculo;
+import cibertec.proyecto.repositories.VehiculoModeloRepository;
 import cibertec.proyecto.repositories.VehiculeRepository;
-import cibertec.proyecto.repositories.VehiculeStatusRepository;
-import cibertec.proyecto.repositories.VehiculeTypeRepository;
+import cibertec.proyecto.repositories.VehiculoEstadoRepository;
+import cibertec.proyecto.repositories.VehiculoTipoRepository;
 import cibertec.proyecto.services.VehiculeService;
 
 
@@ -35,12 +35,12 @@ class SpringCibertecApplicationTests {
 	private VehiculeService vehiculeService;
 
 	@Autowired
-	VehiculeTypeRepository vehiculeTypeRepository;
+	VehiculoTipoRepository vehiculeTypeRepository;
 
 	@Autowired
-	VehiculeStatusRepository vehiculeStatusRepository;
+	VehiculoEstadoRepository vehiculeStatusRepository;
 
 	@Autowired
-	VehiculeModelRepository vehiculeModelRepository;
+	VehiculoModeloRepository vehiculeModelRepository;
 	
 }

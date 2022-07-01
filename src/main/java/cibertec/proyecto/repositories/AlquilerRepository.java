@@ -11,6 +11,6 @@ import cibertec.proyecto.models.Alquiler;
  *
  */
 @Repository
-public interface VehiculeHireRepository extends JpaRepository<Alquiler, Integer> {
+public interface AlquilerRepository extends JpaRepository<Alquiler, Integer> {
 
 }

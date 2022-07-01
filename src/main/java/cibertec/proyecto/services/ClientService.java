@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cibertec.proyecto.models.Cliente;
-import cibertec.proyecto.repositories.ClientRepository;
+import cibertec.proyecto.repositories.ClienteRepository;
 /**
  * 
  * @author grupo 4
@@ -20,7 +20,7 @@ public class ClientService {
 	 * clientRepository
 	 */
 	@Autowired
-	private ClientRepository clientRepository;
+	private ClienteRepository clientRepository;
 	
 
 	/**

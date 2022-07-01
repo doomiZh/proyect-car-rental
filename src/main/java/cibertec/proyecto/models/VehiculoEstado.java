@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class VehiculoEstado extends CommonObject {
+public class VehiculoEstado extends ObjectoComun {
 
 	public VehiculoEstado() {
 		super();

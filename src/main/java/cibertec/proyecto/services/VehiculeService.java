@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.repositories.VehiculeRepository;
 
 /**
@@ -29,8 +29,8 @@ public class VehiculeService {
 	 * 
 	 * @return
 	 */
-	public List<Vehicule> getVehicules() {
-		List<Vehicule> vehicules = vehiculeRepository.findAll();
+	public List<Vehiculo> getVehicules() {
+		List<Vehiculo> vehicules = vehiculeRepository.findAll();
 		Collections.reverse(vehicules);
 		return vehicules;
 	}
@@ -50,7 +50,7 @@ public class VehiculeService {
 	 * @param vehicule
 	 * @return
 	 */
-	public Vehicule save(Vehicule vehicule) {
+	public Vehiculo save(Vehiculo vehicule) {
 		return vehiculeRepository.save(vehicule);
 	}
 
@@ -60,7 +60,7 @@ public class VehiculeService {
 	 * @param id
 	 * @return
 	 */
-	public Optional<Vehicule> findById(int id) {
+	public Optional<Vehiculo> findById(int id) {
 		return vehiculeRepository.findById(id);
 	}
 
