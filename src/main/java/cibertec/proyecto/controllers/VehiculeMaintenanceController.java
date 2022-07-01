@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.client.Supplier;
+import cibertec.proyecto.models.Supplier;
 import cibertec.proyecto.models.vehicule.Vehicule;
 import cibertec.proyecto.models.vehicule.VehiculeMaintenance;
 import cibertec.proyecto.services.SupplierService;

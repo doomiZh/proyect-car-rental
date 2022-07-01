@@ -15,8 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import cibertec.proyecto.models.client.Client;
-import cibertec.proyecto.models.country.Location;
+import cibertec.proyecto.models.Client;
 
 /**
  * 
@@ -35,32 +34,31 @@ public class VehiculeHire {
 	@ManyToOne
 	@JoinColumn(name = "vehicleid", insertable = false, updatable = false)
 	private Vehicule vehicle;
+	
 	private Integer vehicleid;
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dateOut;
+	
 	private Date timeOut;
+	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dateIn;
+	
 	private Date timeIn;
 
 	@ManyToOne
 	@JoinColumn(name = "clientid", insertable = false, updatable = false)
 	private Client client;
+	
 	private Integer clientid;
-
-	@ManyToOne
-	@JoinColumn(name = "locationid", insertable = false, updatable = false)
-	private Location location;
-	private Integer locationid;
 
 	private Double price;
 
 	private String remarks;
 
 	public VehiculeHire(int id, Vehicule vehicle, Integer vehicleid, Date dateOut, Date timeOut, Date dateIn,
-			Date timeIn, Client client, Integer clientid, Location location, Integer locationid, Double price,
-			String remarks) {
+			Date timeIn, Client client, Integer clientid, Double price, String remarks) {
 		super();
 		this.id = id;
 		this.vehicle = vehicle;
@@ -71,14 +69,12 @@ public class VehiculeHire {
 		this.timeIn = timeIn;
 		this.client = client;
 		this.clientid = clientid;
-		this.location = location;
-		this.locationid = locationid;
 		this.price = price;
 		this.remarks = remarks;
 	}
 
 	public VehiculeHire() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	public int getId() {
@@ -153,22 +149,6 @@ public class VehiculeHire {
 		this.clientid = clientid;
 	}
 
-	public Location getLocation() {
-		return location;
-	}
-
-	public void setLocation(Location location) {
-		this.location = location;
-	}
-
-	public Integer getLocationid() {
-		return locationid;
-	}
-
-	public void setLocationid(Integer locationid) {
-		this.locationid = locationid;
-	}
-
 	public Double getPrice() {
 		return price;
 	}
@@ -184,5 +164,5 @@ public class VehiculeHire {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-
+	
 }

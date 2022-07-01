@@ -1,4 +1,4 @@
-package cibertec.proyecto.models.client;
+package cibertec.proyecto.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

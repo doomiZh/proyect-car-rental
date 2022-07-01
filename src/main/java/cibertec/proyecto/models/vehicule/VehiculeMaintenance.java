@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import cibertec.proyecto.models.client.Supplier;
+import cibertec.proyecto.models.Supplier;
 
 /**
  * 

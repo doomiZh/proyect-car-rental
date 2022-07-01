@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.client.Supplier;
-import cibertec.proyecto.models.country.Country;
-import cibertec.proyecto.models.country.State;
+import cibertec.proyecto.models.Supplier;
 import cibertec.proyecto.services.CountryService;
 import cibertec.proyecto.services.StateService;
 import cibertec.proyecto.services.SupplierService;
@@ -56,11 +54,6 @@ public class SupplierController {
 		List<Supplier> suppliers = supplierService.getSuppliers();
 		model.addAttribute("suppliers", suppliers);
 
-		List<State> states = stateService.getStates();
-		model.addAttribute("states", states);
-
-		List<Country> countries = countryService.getCountries();
-		model.addAttribute("countries", countries);
 		return "suppliers";
 	}
 
@@ -87,13 +80,7 @@ public class SupplierController {
 	public String findById(@PathVariable("id") int id, Model model) {
 		List<Supplier> suppliers = supplierService.getSuppliers();
 		model.addAttribute("suppliers", suppliers);
-
-		List<State> states = stateService.getStates();
-		model.addAttribute("states", states);
-
-		List<Country> countries = countryService.getCountries();
-		model.addAttribute("countries", countries);
-
+		
 		Supplier supplier = supplierService.findById(id).get();
 		model.addAttribute("supplier", supplier);
 		return "editSupplier";
