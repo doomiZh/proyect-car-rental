@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import cibertec.proyecto.models.vehicule.VehiculeHire;
+import cibertec.proyecto.models.VehiculeHire;
 import cibertec.proyecto.services.VehiculeHireService;
 
 @RestController

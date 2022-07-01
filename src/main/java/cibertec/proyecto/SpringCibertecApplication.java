@@ -21,9 +21,6 @@ public class SpringCibertecApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		carFleetInit.initCounties();
-		carFleetInit.initStates();
-		carFleetInit.initLocations();
 		carFleetInit.initUsers();
 		carFleetInit.initJobTitles();
 		carFleetInit.initVehiculeStatus();

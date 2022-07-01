@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import cibertec.proyecto.models.vehicule.VehicleModel;
+import cibertec.proyecto.models.VehicleModel;
 import cibertec.proyecto.services.VehiculeModelService;
 
 @Controller

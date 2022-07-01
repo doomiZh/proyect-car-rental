@@ -16,7 +16,7 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import cibertec.proyecto.models.vehicule.Vehicule;
+import cibertec.proyecto.models.Vehicule;
 import cibertec.proyecto.repositories.EmployeeRepository;
 import cibertec.proyecto.repositories.LocationRepository;
 import cibertec.proyecto.repositories.VehiculeModelRepository;

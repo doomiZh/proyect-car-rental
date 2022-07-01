@@ -1,4 +1,4 @@
-package cibertec.proyecto.models.invoice;
+package cibertec.proyecto.models;
 
 import java.util.Date;
 
@@ -13,8 +13,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
-import cibertec.proyecto.models.Client;
 
 /**
  * 

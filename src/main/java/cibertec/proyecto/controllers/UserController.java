@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
-import cibertec.proyecto.models.user.Userss;
+import cibertec.proyecto.models.Userss;
 import cibertec.proyecto.services.UserService;
 
 /**

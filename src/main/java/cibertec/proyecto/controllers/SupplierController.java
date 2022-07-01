@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.Supplier;
-import cibertec.proyecto.services.CountryService;
-import cibertec.proyecto.services.StateService;
 import cibertec.proyecto.services.SupplierService;
 
 /**
  * 
- * @author Delta Dev Softaware
+ * @author grupo 4
  * @version 0.1
  */
 @Controller
@@ -32,16 +30,6 @@ public class SupplierController {
 	 */
 	@Autowired
 	SupplierService supplierService;
-	/**
-	 * countryService
-	 */
-	@Autowired
-	CountryService countryService;
-	/**
-	 * stateService
-	 */
-	@Autowired
-	StateService stateService;
 
 	/**
 	 * getSuppliers

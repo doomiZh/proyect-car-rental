@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.user.UserPrincipal;
-import cibertec.proyecto.models.user.Userss;
+import cibertec.proyecto.models.UserPrincipal;
+import cibertec.proyecto.models.Userss;
 import cibertec.proyecto.repositories.UserRepository;
 
 /**

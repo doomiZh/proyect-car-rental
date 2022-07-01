@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.invoice.InvoiceStatus;
+import cibertec.proyecto.models.InvoiceStatus;
 import cibertec.proyecto.repositories.InvoiceStatusRepository;
 
 /**

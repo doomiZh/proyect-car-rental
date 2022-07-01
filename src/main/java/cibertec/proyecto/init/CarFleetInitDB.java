@@ -5,25 +5,19 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.country.Country;
-import cibertec.proyecto.models.country.Location;
-import cibertec.proyecto.models.country.State;
-import cibertec.proyecto.models.invoice.InvoiceStatus;
+import cibertec.proyecto.models.InvoiceStatus;
+import cibertec.proyecto.models.Userss;
+import cibertec.proyecto.models.VehicleModel;
+import cibertec.proyecto.models.VehicleStatus;
+import cibertec.proyecto.models.VehiculeType;
 import cibertec.proyecto.models.person.EmployeeType;
 import cibertec.proyecto.models.person.JobTitle;
-import cibertec.proyecto.models.user.Userss;
-import cibertec.proyecto.models.vehicule.VehicleModel;
-import cibertec.proyecto.models.vehicule.VehicleStatus;
-import cibertec.proyecto.models.vehicule.VehiculeType;
 import cibertec.proyecto.repositories.ClientRepository;
-import cibertec.proyecto.repositories.CountryRepository;
 import cibertec.proyecto.repositories.EmployeeRepository;
 import cibertec.proyecto.repositories.EmployeeTypeRepository;
 import cibertec.proyecto.repositories.InvoiceRepository;
 import cibertec.proyecto.repositories.InvoiceStatusRepository;
 import cibertec.proyecto.repositories.JobTitleRepository;
-import cibertec.proyecto.repositories.LocationRepository;
-import cibertec.proyecto.repositories.StateRepository;
 import cibertec.proyecto.repositories.SupplierRepository;
 import cibertec.proyecto.repositories.UserRepository;
 import cibertec.proyecto.repositories.VehiculeHireRepository;
@@ -41,13 +35,7 @@ import cibertec.proyecto.repositories.VehiculeTypeRepository;
 @Service
 @Transactional
 public class CarFleetInitDB implements ICarFleetInit {
-     
-	@Autowired
-	CountryRepository countryRepository;
-	@Autowired
-	StateRepository stateRepository;
-	@Autowired
-	LocationRepository locationRepository;
+	
 	@Autowired
 	UserRepository userRepository;
 	@Autowired
@@ -77,39 +65,6 @@ public class CarFleetInitDB implements ICarFleetInit {
 	@Autowired
 	VehiculeMaintenanceRepository  vehiculeMaintenanceRepository;
 	
-	/**
-	 * initCounties
-	 */
-	@Override
-	public void initCounties() {
-		Country country=new Country(1,"2FECE","Paris","France","French","Europe");
-		Country country2=new Country(2,"23DAE","New York","USA","American","America");
-	
-		countryRepository.save(country);
-		countryRepository.save(country2);
-	}
-
-	/**
-	 * initStates
-	 */
-	@Override
-	public void initStates() {
-		
-			State state=new State(1,"Ile de France", "Paris", "0OAE", countryRepository.findById(1).get(),1, "none");
-			State state2=new State(2,"New York", "New York", "03DAE", countryRepository.findById(2).get(),2, "none");
-			stateRepository.save(state);
-			stateRepository.save(state2);	
-	}
-
-	/**
-	 * initLocations
-	 */
-	@Override
-	public void initLocations() {
-		Location locatio=new Location(1, "New York", "New York", countryRepository.findById(1).get(),1, stateRepository.findById(1).get(),1, "New York", "");
-		locationRepository.save(locatio);
-	}
-
 	/**
 	 * initUsers
 	 */

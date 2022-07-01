@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cibertec.proyecto.models.vehicule.VehiculeType;
+import cibertec.proyecto.models.VehiculeType;
 import cibertec.proyecto.services.VehiculeTypeService;
 
 @RestController

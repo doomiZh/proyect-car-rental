@@ -1,11 +1,9 @@
-package cibertec.proyecto.models.vehicule;
+package cibertec.proyecto.models;
 
 import javax.persistence.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
-import cibertec.proyecto.models.CommonObject;
 
 /**
  * 

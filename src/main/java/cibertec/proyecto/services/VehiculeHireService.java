@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cibertec.proyecto.models.vehicule.VehiculeHire;
+import cibertec.proyecto.models.VehiculeHire;
 import cibertec.proyecto.repositories.VehiculeHireRepository;
 
 /**

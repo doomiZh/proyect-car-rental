@@ -1,4 +1,4 @@
-package cibertec.proyecto.models.vehicule;
+package cibertec.proyecto.models;
 
 import java.util.Date;
 

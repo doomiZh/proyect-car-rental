@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cibertec.proyecto.models.vehicule.VehicleModel;
-import cibertec.proyecto.models.vehicule.VehicleStatus;
-import cibertec.proyecto.models.vehicule.Vehicule;
-import cibertec.proyecto.models.vehicule.VehiculeType;
+import cibertec.proyecto.models.VehicleModel;
+import cibertec.proyecto.models.VehicleStatus;
+import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.VehiculeType;
 import cibertec.proyecto.services.EmployeeService;
 import cibertec.proyecto.services.LocationService;
 import cibertec.proyecto.services.VehiculeModelService;

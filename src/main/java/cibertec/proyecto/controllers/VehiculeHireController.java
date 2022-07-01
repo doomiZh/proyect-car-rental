@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.Client;
+import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.VehiculeHire;
 import cibertec.proyecto.models.country.Location;
-import cibertec.proyecto.models.vehicule.Vehicule;
-import cibertec.proyecto.models.vehicule.VehiculeHire;
 import cibertec.proyecto.services.ClientService;
 import cibertec.proyecto.services.LocationService;
 import cibertec.proyecto.services.VehiculeHireService;

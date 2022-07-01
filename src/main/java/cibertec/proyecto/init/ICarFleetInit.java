@@ -5,9 +5,6 @@ package cibertec.proyecto.init;
  * @version 0.1
  */
 public interface ICarFleetInit {
-    void initCounties();
-    void initStates();
-    void initLocations();
     void initUsers();
     void initEmployeeTypes();
     void initJobTitles();

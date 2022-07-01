@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import cibertec.proyecto.models.invoice.InvoiceStatus;
+import cibertec.proyecto.models.InvoiceStatus;
 import cibertec.proyecto.services.InvoiceStatusService;
 
 /**

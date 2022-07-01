@@ -1,4 +1,4 @@
-package cibertec.proyecto.models.user;
+package cibertec.proyecto.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

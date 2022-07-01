@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.Supplier;
-import cibertec.proyecto.models.vehicule.Vehicule;
-import cibertec.proyecto.models.vehicule.VehiculeMaintenance;
+import cibertec.proyecto.models.Vehicule;
+import cibertec.proyecto.models.VehiculeMaintenance;
 import cibertec.proyecto.services.SupplierService;
 import cibertec.proyecto.services.VehiculeMaintenanceService;
 import cibertec.proyecto.services.VehiculeService;

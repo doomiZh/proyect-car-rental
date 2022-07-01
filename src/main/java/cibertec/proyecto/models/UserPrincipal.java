@@ -1,4 +1,4 @@
-package cibertec.proyecto.models.user;
+package cibertec.proyecto.models;
 
 import java.util.Collection;
 import java.util.Collections;
