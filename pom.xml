@@ -9,8 +9,8 @@
 		<version>2.7.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fr.uha.anis</groupId>
-	<artifactId>SPRING_CAR_FLEET_MANAGEMENT</artifactId>
+	<groupId>ciber.auto.alquiler</groupId>
+	<artifactId>ciber-auto-alquiler</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SPRING_CAR_FLEET_MANAGEMENT</name>
 	<description>Demo project for Spring Boot</description>
