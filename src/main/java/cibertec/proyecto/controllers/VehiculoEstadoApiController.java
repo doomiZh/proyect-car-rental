@@ -16,7 +16,7 @@ public class VehiculoEstadoApiController {
 	private VehiculoEstadoService vehiculeStatusService;
 
 	
-	@GetMapping("/api/vehicle-statuses")
+	@GetMapping("/api/vehiculo-estados")
 	public List<VehiculoEstado> getVehiculeStatusList() {
 		return vehiculeStatusService.getVehicleStatus();
 	}

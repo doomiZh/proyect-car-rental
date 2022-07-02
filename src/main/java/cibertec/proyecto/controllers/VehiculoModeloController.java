@@ -14,13 +14,13 @@ import cibertec.proyecto.services.VehiculoModeloService;
 public class VehiculoModeloController {
 
 	@Autowired
-	private VehiculoModeloService vehiculeModelService;
+	private VehiculoModeloService vehiculoModeloService;
 
 	
 	@GetMapping("/vehiculemodels")
 	public String getVehicleModelList(Model model)
 	{
-		List<VehiculoModelo> vehiculemodels=vehiculeModelService.getVehiculeModels();
+		List<VehiculoModelo> vehiculemodels=vehiculoModeloService.getVehiculeModels();
 		model.addAttribute("vehiculemodels", vehiculemodels);
 		return "vehicule_models";
 	}

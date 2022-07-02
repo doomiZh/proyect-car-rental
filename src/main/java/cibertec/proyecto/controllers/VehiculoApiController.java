@@ -19,7 +19,7 @@ import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.services.VehiculoService;
 
 @RestController
-@RequestMapping("/api/vehicule")
+@RequestMapping("/api/vehiculo")
 public class VehiculoApiController {
 
 	@Autowired

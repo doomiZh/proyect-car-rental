@@ -39,10 +39,10 @@ public class VehiculoController {
 	VehiculoTipoService vehiculeTypeService;
 
 	/**
-	 * vehiculeModelService
+	 * vehiculoModeloService
 	 */
 	@Autowired
-	VehiculoModeloService vehiculeModelService;
+	VehiculoModeloService vehiculoModeloService;
 
 	/**
 	 * vehiculeStatusService
@@ -64,7 +64,7 @@ public class VehiculoController {
 		List<VehiculoTipo> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
 		
-		List<VehiculoModelo> vehiculeModels = vehiculeModelService.getVehiculeModels();
+		List<VehiculoModelo> vehiculeModels = vehiculoModeloService.getVehiculeModels();
 		model.addAttribute("vehiculeModels", vehiculeModels);
 		
 		List<VehiculoEstado> vehiculeStatus = vehiculeStatusService.getVehicleStatus();
@@ -97,7 +97,7 @@ public class VehiculoController {
 		List<VehiculoTipo> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
 		model.addAttribute("vehiculetypes", vehiculetypes);
 		
-		List<VehiculoModelo> vehiculeModels = vehiculeModelService.getVehiculeModels();
+		List<VehiculoModelo> vehiculeModels = vehiculoModeloService.getVehiculeModels();
 		model.addAttribute("vehiculeModels", vehiculeModels);
 		
 		List<VehiculoEstado> vehiculeStatus = vehiculeStatusService.getVehicleStatus();

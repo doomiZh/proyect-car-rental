@@ -13,13 +13,13 @@ import cibertec.proyecto.services.VehiculoModeloService;
 public class VehiculoModeloApiController {
 
 	@Autowired
-	private VehiculoModeloService vehiculeModelService;
+	private VehiculoModeloService vehiculoModeloService;
 
 	
-	@GetMapping("/api/vehicle-models")
+	@GetMapping("/api/vehiculo-modelos")
 	public List<VehiculoModelo> getVehicleModelList()
 	{
-		return vehiculeModelService.getVehiculeModels();
+		return vehiculoModeloService.getVehiculeModels();
 	}
 	
 }

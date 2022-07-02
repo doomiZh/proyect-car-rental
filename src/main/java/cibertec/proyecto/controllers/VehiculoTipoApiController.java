@@ -15,7 +15,7 @@ public class VehiculoTipoApiController {
 	@Autowired
 	private VehiculoTipoService vehiculeTypeService;
 
-	@GetMapping("/api/vehicle-types")
+	@GetMapping("/api/vehiculo-tipos")
 	public List<VehiculoTipo> getVehiculeTypeList() {
 		return vehiculeTypeService.getVehiculeTypes();
 	}
