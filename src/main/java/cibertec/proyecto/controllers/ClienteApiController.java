@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import cibertec.proyecto.models.Cliente;
-import cibertec.proyecto.services.ClientService;
+import cibertec.proyecto.services.ClienteService;
 
 @RestController
 @RequestMapping("/api/clients")
-public class ClientApiController {
+public class ClienteApiController {
 	@Autowired
-	private ClientService clientService;
+	private ClienteService clientService;
 
 	public List<Cliente> getClientsTypeList() {
 		return clientService.getClients();

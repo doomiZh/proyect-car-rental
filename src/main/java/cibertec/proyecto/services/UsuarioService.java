@@ -11,7 +11,7 @@ import cibertec.proyecto.repositories.UsuarioRepository;
  *
  */
 @Service
-public class UserService {
+public class UsuarioService {
 
 	/**
 	 * userRepository

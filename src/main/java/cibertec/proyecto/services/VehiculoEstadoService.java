@@ -14,7 +14,7 @@ import cibertec.proyecto.repositories.VehiculoEstadoRepository;
  *
  */
 @Service
-public class VehiculeStatusService {
+public class VehiculoEstadoService {
 
 	/**
 	 * vehiculeStatusRepository

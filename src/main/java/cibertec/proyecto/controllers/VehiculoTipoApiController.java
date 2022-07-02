@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cibertec.proyecto.models.VehiculoTipo;
-import cibertec.proyecto.services.VehiculeTypeService;
+import cibertec.proyecto.services.VehiculoTipoService;
 
 @RestController
-public class VehicleTypeApiController {
+public class VehiculoTipoApiController {
 
 	@Autowired
-	private VehiculeTypeService vehiculeTypeService;
+	private VehiculoTipoService vehiculeTypeService;
 
 	@GetMapping("/api/vehicle-types")
 	public List<VehiculoTipo> getVehiculeTypeList() {

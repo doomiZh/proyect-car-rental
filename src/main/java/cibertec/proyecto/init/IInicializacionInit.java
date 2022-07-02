@@ -4,7 +4,7 @@ package cibertec.proyecto.init;
  * @author Grupo 4
  * @version 0.1
  */
-public interface ICarFleetInit {
+public interface IInicializacionInit {
     void initUsers();
     void initVehiculeModel();
     void initVehiculeStatus();

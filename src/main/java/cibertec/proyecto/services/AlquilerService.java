@@ -15,7 +15,7 @@ import cibertec.proyecto.repositories.AlquilerRepository;
  *
  */
 @Service
-public class VehiculeHireService {
+public class AlquilerService {
 
 	/**
 	 * 

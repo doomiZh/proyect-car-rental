@@ -11,6 +11,6 @@ import cibertec.proyecto.models.Vehiculo;
  *
  */
 @Repository
-public interface VehiculeRepository extends JpaRepository<Vehiculo, Integer> {
+public interface VehiculoRepository extends JpaRepository<Vehiculo, Integer> {
 
 }

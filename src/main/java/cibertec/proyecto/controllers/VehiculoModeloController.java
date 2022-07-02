@@ -8,13 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import cibertec.proyecto.models.VehiculoModelo;
-import cibertec.proyecto.services.VehiculeModelService;
+import cibertec.proyecto.services.VehiculoModeloService;
 
 @Controller
-public class VehicleModelController {
+public class VehiculoModeloController {
 
 	@Autowired
-	private VehiculeModelService vehiculeModelService;
+	private VehiculoModeloService vehiculeModelService;
 
 	
 	@GetMapping("/vehiculemodels")

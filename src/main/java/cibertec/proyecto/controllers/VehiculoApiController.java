@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import cibertec.proyecto.models.Vehiculo;
-import cibertec.proyecto.services.VehiculeService;
+import cibertec.proyecto.services.VehiculoService;
 
 @RestController
 @RequestMapping("/api/vehicule")
-public class VehiculeApiController {
+public class VehiculoApiController {
 
 	@Autowired
-	private VehiculeService vehiculeService;
+	private VehiculoService vehiculeService;
 
 	public List<Vehiculo> getVehiculeTypeList() {
 		return vehiculeService.getVehicules();

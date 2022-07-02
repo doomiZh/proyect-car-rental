@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cibertec.proyecto.models.VehiculoEstado;
-import cibertec.proyecto.services.VehiculeStatusService;
+import cibertec.proyecto.services.VehiculoEstadoService;
 
 @RestController
-public class VehicleStatusApiController {
+public class VehiculoEstadoApiController {
 
 	@Autowired
-	private VehiculeStatusService vehiculeStatusService;
+	private VehiculoEstadoService vehiculeStatusService;
 
 	
 	@GetMapping("/api/vehicle-statuses")

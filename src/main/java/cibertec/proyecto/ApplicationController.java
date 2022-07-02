@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import cibertec.proyecto.services.ClientService;
-import cibertec.proyecto.services.VehiculeService;
+import cibertec.proyecto.services.ClienteService;
+import cibertec.proyecto.services.VehiculoService;
 
 /**
  * ApplicationController
@@ -20,13 +20,13 @@ public class ApplicationController {
 	 * @ ClientService
 	 */
 	@Autowired
-	ClientService clientService;
+	ClienteService clientService;
 
 	/**
 	 * vehiculeService
 	 */
 	@Autowired
-	VehiculeService vehiculeService;
+	VehiculoService vehiculeService;
 
 	/**
 	 * index: redirect to index page

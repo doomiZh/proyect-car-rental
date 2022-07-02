@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import cibertec.proyecto.models.Cliente;
 import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.models.Alquiler;
-import cibertec.proyecto.services.ClientService;
-import cibertec.proyecto.services.VehiculeHireService;
-import cibertec.proyecto.services.VehiculeService;
+import cibertec.proyecto.services.ClienteService;
+import cibertec.proyecto.services.AlquilerService;
+import cibertec.proyecto.services.VehiculoService;
 
 /**
  * 
@@ -28,25 +28,25 @@ import cibertec.proyecto.services.VehiculeService;
  *
  */
 @Controller
-public class VehiculeHireController {
+public class AlquilerController {
 
 	/**
 	 * vehiculeHireService
 	 */
 	@Autowired
-	private VehiculeHireService vehiculeHireService;
+	private AlquilerService vehiculeHireService;
 
 	/**
 	 * vehiculeService
 	 */
 	@Autowired
-	VehiculeService vehiculeService;
+	VehiculoService vehiculeService;
 
 	/**
 	 * clientService
 	 */
 	@Autowired
-	ClientService clientService;
+	ClienteService clientService;
 
 	/**
 	 * getVehicules

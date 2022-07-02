@@ -18,10 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.repositories.VehiculoModeloRepository;
-import cibertec.proyecto.repositories.VehiculeRepository;
+import cibertec.proyecto.repositories.VehiculoRepository;
 import cibertec.proyecto.repositories.VehiculoEstadoRepository;
 import cibertec.proyecto.repositories.VehiculoTipoRepository;
-import cibertec.proyecto.services.VehiculeService;
+import cibertec.proyecto.services.VehiculoService;
 
 
 
@@ -29,10 +29,10 @@ import cibertec.proyecto.services.VehiculeService;
 class SpringCibertecApplicationTests {
 
 	@Mock
-	VehiculeRepository vehiculeRepository;
+	VehiculoRepository vehiculeRepository;
 
 	@InjectMocks
-	private VehiculeService vehiculeService;
+	private VehiculoService vehiculeService;
 
 	@Autowired
 	VehiculoTipoRepository vehiculeTypeRepository;

@@ -5,13 +5,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import cibertec.proyecto.init.CarFleetInitDB;
+import cibertec.proyecto.init.InicializacionDB;
 
 @SpringBootApplication()
 public class SpringCibertecApplication implements CommandLineRunner {
 
 	@Autowired
-	CarFleetInitDB carFleetInit;
+	InicializacionDB carFleetInit;
 
 	
 	public static void main(String[] args) {

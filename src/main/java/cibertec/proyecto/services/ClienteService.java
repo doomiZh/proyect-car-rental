@@ -14,7 +14,7 @@ import cibertec.proyecto.repositories.ClienteRepository;
  *
  */
 @Service
-public class ClientService {
+public class ClienteService {
 
 	/**
 	 * clientRepository

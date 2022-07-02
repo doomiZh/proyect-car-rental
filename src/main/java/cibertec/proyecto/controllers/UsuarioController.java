@@ -8,7 +8,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import cibertec.proyecto.models.Usuario;
-import cibertec.proyecto.services.UserService;
+import cibertec.proyecto.services.UsuarioService;
 
 /**
  * 
@@ -16,13 +16,13 @@ import cibertec.proyecto.services.UserService;
  *
  */
 @Controller
-public class UserController {
+public class UsuarioController {
 
 	/**
 	 * userService
 	 */
 	@Autowired
-	UserService userService;
+	UsuarioService userService;
 
 	/**
 	 * profile

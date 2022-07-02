@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cibertec.proyecto.models.Cliente;
-import cibertec.proyecto.services.ClientService;
+import cibertec.proyecto.services.ClienteService;
 
 /**
  * 
@@ -23,12 +23,12 @@ import cibertec.proyecto.services.ClientService;
  * @version 0.1
  */
 @Controller
-public class ClientController {
+public class ClienteController {
 	/**
 	 * clientService
 	 */
 	@Autowired
-	private ClientService clientService;
+	private ClienteService clientService;
 	
 	/**
 	 * getClients

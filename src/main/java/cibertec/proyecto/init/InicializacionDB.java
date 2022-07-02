@@ -13,7 +13,7 @@ import cibertec.proyecto.repositories.ClienteRepository;
 import cibertec.proyecto.repositories.UsuarioRepository;
 import cibertec.proyecto.repositories.AlquilerRepository;
 import cibertec.proyecto.repositories.VehiculoModeloRepository;
-import cibertec.proyecto.repositories.VehiculeRepository;
+import cibertec.proyecto.repositories.VehiculoRepository;
 import cibertec.proyecto.repositories.VehiculoEstadoRepository;
 import cibertec.proyecto.repositories.VehiculoTipoRepository;
 
@@ -24,7 +24,7 @@ import cibertec.proyecto.repositories.VehiculoTipoRepository;
  */
 @Service
 @Transactional
-public class CarFleetInitDB implements ICarFleetInit {
+public class InicializacionDB implements IInicializacionInit {
 	
 	@Autowired
 	UsuarioRepository userRepository;
@@ -42,7 +42,7 @@ public class CarFleetInitDB implements ICarFleetInit {
 	VehiculoTipoRepository  vehiculeTypeRepository;
 
 	@Autowired
-	VehiculeRepository vehiculeRepository;
+	VehiculoRepository vehiculeRepository;
 	
 	@Autowired
 	AlquilerRepository vehiculeHireRepository;

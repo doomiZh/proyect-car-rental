@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import cibertec.proyecto.models.Alquiler;
-import cibertec.proyecto.services.VehiculeHireService;
+import cibertec.proyecto.services.AlquilerService;
 
 @RestController
 @RequestMapping("/api/vehiculehire")
-public class VehiculeHireApiController {
+public class AlquilerApiController {
 
 	@Autowired
-	private VehiculeHireService vehiculehireService;
+	private AlquilerService vehiculehireService;
 
 	public List<Alquiler> getVehiculeTypeList() {
 		return vehiculehireService.getVehiculeHires();

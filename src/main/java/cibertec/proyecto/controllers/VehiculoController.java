@@ -18,37 +18,37 @@ import cibertec.proyecto.models.VehiculoModelo;
 import cibertec.proyecto.models.VehiculoEstado;
 import cibertec.proyecto.models.Vehiculo;
 import cibertec.proyecto.models.VehiculoTipo;
-import cibertec.proyecto.services.VehiculeModelService;
-import cibertec.proyecto.services.VehiculeService;
-import cibertec.proyecto.services.VehiculeStatusService;
-import cibertec.proyecto.services.VehiculeTypeService;
+import cibertec.proyecto.services.VehiculoModeloService;
+import cibertec.proyecto.services.VehiculoService;
+import cibertec.proyecto.services.VehiculoEstadoService;
+import cibertec.proyecto.services.VehiculoTipoService;
 
 @Controller
-public class VehiculeController {
+public class VehiculoController {
 
 	/**
 	 * vehiculeService
 	 */
 	@Autowired
-	VehiculeService vehiculeService;
+	VehiculoService vehiculeService;
 
 	/**
 	 * vehiculeTypeService
 	 */
 	@Autowired
-	VehiculeTypeService vehiculeTypeService;
+	VehiculoTipoService vehiculeTypeService;
 
 	/**
 	 * vehiculeModelService
 	 */
 	@Autowired
-	VehiculeModelService vehiculeModelService;
+	VehiculoModeloService vehiculeModelService;
 
 	/**
 	 * vehiculeStatusService
 	 */
 	@Autowired
-	VehiculeStatusService vehiculeStatusService;
+	VehiculoEstadoService vehiculeStatusService;
 
 	/**
 	 * getVehicules
