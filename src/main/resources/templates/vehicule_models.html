@@ -35,13 +35,6 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
-
-<!-- =======================================================
-      
-      
-      
-      
-    ======================================================= -->
 </head>
 
 <body>
@@ -72,26 +65,21 @@
 						</ol>
 					</div>
 				</div>
-				<!-- page start-->
-
+				<button type="button" class="btn btn-success" onclick="abrirCreacion()">
+					<span class="fa fa-plus"></span>
+				</button>
 				<br>
 				<br>
 				<section class="panel">
-
 					<table class="table table-striped">
 						<thead>
 							<tr>
 								<th>Descripcion</th>
 								<th>Detalles</th>
+								<th>Acciones</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr th:each="vehiculemodel:${vehiculemodels}">
-								<td th:text="${vehiculemodel.description}"></td>
-								<td th:text="${vehiculemodel.details}"></td>
-
-							</tr>
-
+						<tbody id="resultadoGrilla">
 						</tbody>
 					</table>
 				</section>
@@ -100,16 +88,34 @@
 		</section>
 		<!--main content end-->
 		<div th:insert="footer :: footer"></div>
-
-
-		<div th:insert="addCountryForm :: add_country_form" class="modal fade"
-			id="exampleModal" tabindex="-1" role="dialog"
-			aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
-
-
-
-
-
+		
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<di class="modal-dialog" role="document">
+				<div class="modal-content" style="width: 500px; margin: auto;">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Modelo de Vehiculo</h5>
+					</div>
+					<div class="modal-body">
+						<form id="form-agregar" method="post">
+							<div class="form-group">
+								<label>Descripcion</label>
+								<input type="text" name="description" id="description" class="form-control" placeholder="Descripcion" />
+							</div>
+							<div class="form-group">
+								<label>Detalles</label>
+								<textarea type="text" name="details" id="details" class="form-control" placeholder="Detalles"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary" id="form-button">Crear</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			
 	</section>
 	<!-- container section end -->
 	<!-- javascripts -->
@@ -124,7 +130,69 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 		crossorigin="anonymous"></script>
+	<script>
+		let globalUrl = '/api/vehiculo-modelos';
 
+		function listarGrilla() {
+			$.get("/api/vehiculo-modelos",
+				function(data) {
+					let markup = '';
+
+					$.each(data, function(index, value) {
+						markup += `<tr>
+								<td>${value.description}</td>
+								<td>${value.details}</td>
+								<td>
+									<button type="button" class="btn btn-primary" onclick="abrirEdicion(${value.id})">
+										<span class="fa fa-edit"></span>
+									</button>
+								</td>
+							</tr>`;
+					});
+					
+					$("#resultadoGrilla").html(markup);
+				},
+				"json");
+		}
+
+		function abrirEdicion(id) {
+			$.get(`/api/vehiculo-modelos/${id}`,
+				function(data) {
+					$('#description').val(data.description);
+					$('#details').val(data.details);
+				},
+				"json");
+
+			$('#exampleModal').modal('show');
+
+			globalUrl = `/api/vehiculo-modelos/${id}`;
+		}
+
+		function abrirCreacion() {
+			$('#description').val("");
+			$('#details').val("");
+			$('#exampleModal').modal('show');
+
+			globalUrl = '/api/vehiculo-modelos';
+		}
+
+		$(document).ready(function() {
+			listarGrilla();
+
+			$("#form-agregar").submit(function(event) {
+				event.preventDefault();
+
+				const description 	= $('#description').val();
+				const details 		= $('#details').val();
+
+				$.post(globalUrl,
+					{ description: description, details: details },
+					function(data) {
+						listarGrilla();
+						$('#exampleModal').modal('hide');
+					});
+			});
+		});
+	</script>
 </body>
-
 </html>

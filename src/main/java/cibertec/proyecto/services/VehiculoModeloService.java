@@ -1,6 +1,7 @@
 package cibertec.proyecto.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,18 +17,28 @@ import cibertec.proyecto.repositories.VehiculoModeloRepository;
 @Service
 public class VehiculoModeloService {
 
-	/**
-	 * vehiculeModelRepository
-	 */
 	@Autowired
-	private VehiculoModeloRepository vehiculeModelRepository;
+	private VehiculoModeloRepository vehiculoModeloRepository;
 
-	/**
-	 * getVehiculeModels
-	 * @return
-	 */
+	
 	public List<VehiculoModelo> getVehiculeModels() {
-		return vehiculeModelRepository.findAll();
+		return vehiculoModeloRepository.findAll();
+	}
+	
+	public Optional<VehiculoModelo> findById(int id) {
+		return vehiculoModeloRepository.findById(id);
+	}
+	
+	public VehiculoModelo save(VehiculoModelo vehiculoModelo)
+	{
+		return vehiculoModeloRepository.save(vehiculoModelo);
+	}
+	
+	public VehiculoModelo update(int id, VehiculoModelo vehiculoModelo)
+	{
+		vehiculoModelo.setId(id);
+		
+		return vehiculoModeloRepository.save(vehiculoModelo);
 	}
 
 }

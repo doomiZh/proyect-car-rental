@@ -17,7 +17,7 @@ public class VehiculoEstadoController {
 	private VehiculoEstadoService vehiculeStatusService;
 
 	
-	@GetMapping("/vehiculestatus")
+	@GetMapping("/vehiculo-estados")
 	public String getVehiculeStatusList(Model model)
 	{
 		List<VehiculoEstado> vehiculestatuss = vehiculeStatusService.getVehicleStatus();

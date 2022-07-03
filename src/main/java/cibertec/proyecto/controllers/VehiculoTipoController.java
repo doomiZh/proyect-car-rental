@@ -17,7 +17,7 @@ public class VehiculoTipoController {
 	private VehiculoTipoService vehiculeTypeService;
 
 	
-	@GetMapping("/vehiculetypes")
+	@GetMapping("/vehiculos-tipos")
 	public String getVehiculeTypeList(Model model) {
 		
 		List<VehiculoTipo> vehiculetypes = vehiculeTypeService.getVehiculeTypes();
