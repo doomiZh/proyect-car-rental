@@ -9,7 +9,7 @@
 				<div class="form-group">
 					<label for="exampleInputEmail1">Vehiculo</label> <select
 						class="form-control" name="vehicleid">
-						<option th:each="vehicule:${vehicules}" th:text="${vehicule.name}"
+						<option th:each="vehicule:${vehicules}" th:text="${vehicule.vehicleNumber}"
 							th:value="${vehicule.id}"></option>
 					</select>
 				</div>
